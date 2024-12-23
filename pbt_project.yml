@@ -23,7 +23,8 @@ pipelines:
     datasets:
       inputs:
       - datasets/immigration-raw
-      outputs: []
+      outputs:
+      - datasets/immigration-bronze
     subgraphs: []
     dependencies: {}
 datasets:
@@ -40,6 +41,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2024-12-23 22:17:17'
+  datasets/immigration-bronze:
+    name: immigration-bronze
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2024-12-23 23:15:46'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2024-12-23 23:15:46'
 templates: {}
 jobs: {}
 gemContainer:

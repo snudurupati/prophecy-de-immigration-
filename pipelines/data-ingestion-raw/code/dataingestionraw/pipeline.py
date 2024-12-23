@@ -8,6 +8,8 @@ from dataingestionraw.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_immigration_raw = immigration_raw(spark)
+    df_reformatted_data_types = reformatted_data_types(spark, df_immigration_raw)
+    immigration_bronze(spark, df_reformatted_data_types)
 
 def main():
     spark = SparkSession.builder\
