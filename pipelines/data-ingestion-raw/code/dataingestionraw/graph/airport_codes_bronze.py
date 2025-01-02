@@ -7,4 +7,8 @@ from dataingestionraw.config.ConfigStore import *
 from dataingestionraw.functions import *
 
 def airport_codes_bronze(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`airport_codes_bronze`")
+    in0.write\
+        .format("delta")\
+        .option("mergeSchema", True)\
+        .mode("overwrite")\
+        .saveAsTable("`sreeram`.`immigration_schema`.`airport_codes_bronze`")

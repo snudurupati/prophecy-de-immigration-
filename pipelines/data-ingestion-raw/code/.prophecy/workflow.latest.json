@@ -101,18 +101,6 @@
     "target" : "hK0idfKHhEoD7WSTqzLlI$$xO4CCYp_SGgBmGvB7ddcY",
     "targetPort" : "-SrProBkQOqTlZs2RvrUJ$$oyx_5FmeQz8dWbhrJVmtE"
   }, {
-    "id" : "9c3BzL2SDymGfP-LE2xO6$$eA7yfXXuB_oCQ7xLFMdzl",
-    "source" : "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy",
-    "sourcePort" : "zNgurFp66GaCmKIdlZEzr$$phuuU2v-p5hw8V-zm8ZhH",
-    "target" : "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN",
-    "targetPort" : "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax"
-  }, {
-    "id" : "LhlUp1XTBOu7XRLN9Asc6$$Fe53GLoQqvmpNJBRd6yS5",
-    "source" : "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN",
-    "sourcePort" : "9NSSxeam_wtq4wbbh9_GU$$3m9Smr2XxE4qNvgwSxpgv",
-    "target" : "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6",
-    "targetPort" : "fem22_TgAqvLPllmZv36q$$23AOgqz4vn3EzYShRL8hR"
-  }, {
     "id" : "OF6hUodm7qmV09fi1kV5q",
     "source" : "XdofToQvnK-kL7E4xiaKg$$2jTo-d_zdQhDV59ESdzxj",
     "sourcePort" : "czwOlGEYge2Seamtra6TN$$8KZqxyRJD7TWDR59E2O9P",
@@ -124,6 +112,18 @@
     "sourcePort" : "IJVeSnsF8YtLmv6vZ8_xJ$$xfGW-q2vSp8qlJM_ESlKs",
     "target" : "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv",
     "targetPort" : "ysrWNsVZKonwxb-ulxri8$$nqQe0jqX2d9qIqlEz1EHL"
+  }, {
+    "id" : "JX9hTr3ADW3442HNjwRED",
+    "source" : "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy",
+    "sourcePort" : "zNgurFp66GaCmKIdlZEzr$$phuuU2v-p5hw8V-zm8ZhH",
+    "target" : "3CNZstx3zmRG78wOoc0cs$$aOoZwzNtgq3x6UMzsltmz",
+    "targetPort" : "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe"
+  }, {
+    "id" : "jQjmw2deB_eaq9xvvUPT5",
+    "source" : "3CNZstx3zmRG78wOoc0cs$$aOoZwzNtgq3x6UMzsltmz",
+    "sourcePort" : "edvjoqybLisNTry9wfeLP$$N7c5EGlWyS4Y4cw40MgBz",
+    "target" : "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6",
+    "targetPort" : "fem22_TgAqvLPllmZv36q$$23AOgqz4vn3EzYShRL8hR"
   } ],
   "processes" : {
     "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv" : {
@@ -137,7 +137,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Stores U.S. demographic data in a structured format for easy access and analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -716,6 +718,147 @@
         "datasetId" : "datasets/immigration-bronze"
       }
     },
+    "3CNZstx3zmRG78wOoc0cs$$aOoZwzNtgq3x6UMzsltmz" : {
+      "id" : "3CNZstx3zmRG78wOoc0cs$$aOoZwzNtgq3x6UMzsltmz",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "airport_data_reformat",
+        "slug" : "airport_data_reformat",
+        "x" : -2080,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Reformats airport data for clearer presentation and accessibility.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "IATA",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The three-letter code assigned to each airport, used for ticketing and travel itineraries.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ICAO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The International Civil Aviation Organization code for the airport; A unique four-letter alphanumeric code assigned to each airport.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Airport name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Information",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "URL link providing additional information about the airport, including details and statistics.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "edvjoqybLisNTry9wfeLP$$N7c5EGlWyS4Y4cw40MgBz",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "IATA",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "IATA"
+          },
+          "description" : ""
+        }, {
+          "target" : "ICAO",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ICAO"
+          },
+          "description" : ""
+        }, {
+          "target" : "Airport_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`Airport name`"
+          },
+          "description" : ""
+        }, {
+          "target" : "Country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Country"
+          },
+          "description" : ""
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "City"
+          },
+          "description" : ""
+        }, {
+          "target" : "Information",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Information"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe##City", "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe##ICAO", "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe##Country", "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe##Information", "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe##IATA", "3pq-V9-_INBAD1Vtvbpws$$haanQFrWW-7vKHA4bDVKe##Airport name" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "8CX8F_5qZ7U7P7A32QBf0$$sZ-ttcM3VMmIePgJnUOmD" : {
       "id" : "8CX8F_5qZ7U7P7A32QBf0$$sZ-ttcM3VMmIePgJnUOmD",
       "component" : "Source",
@@ -867,243 +1010,6 @@
         "datasetId" : "datasets/us-demographics-raw"
       }
     },
-    "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN" : {
-      "id" : "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "reformatted_data",
-        "slug" : "reformatted_data",
-        "x" : -2080,
-        "y" : -820,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Transforms and standardizes data for better usability and clarity in reporting.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "ident",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for each airport or heliport, typically a code used for reference.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "type",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The classification of the airport or landing area, indicating whether it is a heliport, small airport, or other types.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The official name of the airport or heliport.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "elevation_ft",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Height of the airport or heliport above sea level, measured in feet.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "continent",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Geographical continent where the airport is located; In this dataset, it is primarily 'NA' for North America.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "iso_country",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "ISO 3166-1 alpha-2 code representing the country where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "iso_region",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "ISO code representing the specific region within the country where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "municipality",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The name of the city or town where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "gps_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "GPS code assigned to the airport; This code is used for navigation and identification purposes.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "iata_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The International Air Transport Association (IATA) code for the airport; Typically a three-letter code used for ticketing and baggage handling.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "local_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique local identifier for the airport or heliport, often used for internal reference.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "coordinates",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Geographical coordinates of the airport; Represents the longitude and latitude in the format 'longitude, latitude'.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "9NSSxeam_wtq4wbbh9_GU$$3m9Smr2XxE4qNvgwSxpgv",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ {
-          "target" : "id",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "ident"
-          },
-          "description" : ""
-        }, {
-          "target" : "type",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "type"
-          },
-          "description" : ""
-        }, {
-          "target" : "name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "name"
-          },
-          "description" : ""
-        }, {
-          "target" : "elevation_ft",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "cast(elevation_ft as integer)"
-          },
-          "description" : ""
-        }, {
-          "target" : "continent",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "continent"
-          },
-          "description" : ""
-        }, {
-          "target" : "iso_country",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "iso_country"
-          },
-          "description" : ""
-        }, {
-          "target" : "iso_region",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "iso_region"
-          },
-          "description" : ""
-        }, {
-          "target" : "municipality",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "municipality"
-          },
-          "description" : ""
-        }, {
-          "target" : "gps_code",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "gps_code"
-          },
-          "description" : ""
-        }, {
-          "target" : "iata_code",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "iata_code"
-          },
-          "description" : ""
-        }, {
-          "target" : "local_code",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "local_code"
-          },
-          "description" : ""
-        }, {
-          "target" : "coordinates",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "coordinates"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##name", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##iso_region", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##ident", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##municipality", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##local_code", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##iso_country", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##iata_code", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##continent", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##gps_code", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##coordinates", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##type", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##elevation_ft" ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
     "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6" : {
       "id" : "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6",
       "component" : "Target",
@@ -1115,7 +1021,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Stores airport codes in a structured format for easy access and analysis, enabling efficient data management for immigration-related insights.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1124,110 +1032,56 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "id",
+              "name" : "IATA",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for each airport or heliport, typically a code used for reference.",
+                "description" : "The three-letter code assigned to each airport, used for ticketing and travel itineraries.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "type",
+              "name" : "ICAO",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The classification of the airport or landing area, indicating whether it is a heliport, small airport, or other types.",
+                "description" : "The International Civil Aviation Organization code for the airport; A unique four-letter alphanumeric code assigned to each airport.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "name",
+              "name" : "Airport_Name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The official name of the airport or heliport.",
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "elevation_ft",
-              "type" : "integer",
+              "name" : "Country",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "The country where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "continent",
+              "name" : "City",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Geographical continent where the airport is located; In this dataset, it is primarily 'NA' for North America.",
+                "description" : "The city where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "iso_country",
+              "name" : "Information",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "ISO 3166-1 alpha-2 code representing the country where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "iso_region",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "ISO code representing the specific region within the country where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "municipality",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The name of the city or town where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "gps_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "GPS code assigned to the airport; This code is used for navigation and identification purposes.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "iata_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The International Air Transport Association (IATA) code for the airport; Typically a three-letter code used for ticketing and baggage handling.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "local_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique local identifier for the airport or heliport, often used for internal reference.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "coordinates",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Geographical coordinates of the airport; Represents the longitude and latitude in the format 'longitude, latitude'.",
+                "description" : "URL link providing additional information about the airport, including details and statistics.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1255,7 +1109,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Loads airport codes and related information from a CSV file for further analysis or processing.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],

@@ -331,7 +331,7 @@
       "isNullValuesInUnitTestsEnabled" : true
     },
     "language" : "python",
-    "fabricId" : "20033",
+    "fabricId" : "20471",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -392,8 +392,8 @@
       "metadata" : {
         "label" : "immigration-bronze",
         "slug" : "immigration_bronze",
-        "x" : -780,
-        "y" : -320,
+        "x" : -1480,
+        "y" : -640,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
