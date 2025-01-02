@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
-def airport_codes_bronze(spark: SparkSession) -> DataFrame:
-    return spark.read.table("`sreeram`.`immigration_schema`.`airport_codes_bronze`")
+def I94_Countries(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("error").saveAsTable("`sreeram`.`immigration_schema`.`i94_countries`")

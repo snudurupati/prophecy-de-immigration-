@@ -8,8 +8,13 @@ from dataprocessingsilver.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_immigration_bronze = immigration_bronze(spark)
-    df_airport_codes_bronze = airport_codes_bronze(spark)
-    df_join_by_address_cd = join_by_address_cd(spark, df_immigration_bronze, df_airport_codes_bronze)
+    df_us_state_codes_bronze = us_state_codes_bronze(spark)
+    df_immigration_bronze_airport_codes_bronze = immigration_bronze_airport_codes_bronze(
+        spark, 
+        df_immigration_bronze, 
+        df_us_state_codes_bronze
+    )
+    I94_Countries(spark, df_immigration_bronze_airport_codes_bronze)
 
 def main():
     spark = SparkSession.builder\

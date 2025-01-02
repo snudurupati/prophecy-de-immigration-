@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
-def join_by_address_cd(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
-    return in0.alias("in0").join(in1.alias("in1"), (col("in0.address_cd") == col("in1.Country")), "inner")
+def us_state_codes_bronze(spark: SparkSession) -> DataFrame:
+    return spark.read.table("`sreeram`.`immigration_schema`.`us_state_codes_bronze`")

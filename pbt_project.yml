@@ -45,9 +45,10 @@ pipelines:
     createdAt: '2025-01-02 17:24:55'
     datasets:
       inputs:
-      - datasets/airport-codes-bronze
       - datasets/immigration-bronze
-      outputs: []
+      - datasets/us-state-codes-bronze
+      outputs:
+      - datasets/I94-Countries
     subgraphs: []
     dependencies: {}
 datasets:
@@ -194,6 +195,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-02 22:17:24'
+  datasets/I94-Countries:
+    name: I94-Countries
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 22:39:54'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 22:39:54'
 templates: {}
 jobs: {}
 gemContainer:

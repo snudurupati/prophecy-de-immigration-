@@ -77,17 +77,23 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "M_nhilI4C7U7Zn4TsYUdk$$1pqCqJL-Z4l27iEyL-XGk",
+    "id" : "FNQaW4EXE0vmilCDuCec0$$blo3PTJbnLCoFXVfGH1bn",
     "source" : "X-UzAa5BDx4j9aKY3D692$$zy0yuySpJAbw_PR-caZWA",
     "sourcePort" : "7yNqHDlkm8yX5EOg189Nl$$dMyZI3OGlrdXz8bKbMEYA",
-    "target" : "qv7BRGk3MKrKxU3oDrSHt$$tvFgDcpEKkFVtRHD0lDdT",
-    "targetPort" : "toKlXFbfmlIjrn9QffAkp$$jXWcZYdWXnqsCgdpUvqVK"
+    "target" : "sDcyoq3afhmqf1DBJltMF$$an5nMMsCapxh9mVWHLvuh",
+    "targetPort" : "2IZMCLCNQGqWGOxSxfOJv$$QkC5zDRU-llu-fWdcKuP7"
   }, {
-    "id" : "0ZYFAO_uOPgNrmCJxT4qv$$Mi7yyCXqDxQU18btpsT8n",
-    "source" : "iam8jFcWbPkKnHMD7GzFx$$92FuOlHv0q4yMGwwwFSFj",
-    "sourcePort" : "I2bYzT8N8EVVcxqLOOrb7$$HMpw0xprPRrk2XdUmdpEz",
-    "target" : "qv7BRGk3MKrKxU3oDrSHt$$tvFgDcpEKkFVtRHD0lDdT",
-    "targetPort" : "wOGws5xYXg45VG1C1oxAo$$sbvl-eIEkcAhEh6KFhinK"
+    "id" : "w62DJhgL28qum_qC5K5HZ$$3ezcoZnzZVVbBgzJdlfOM",
+    "source" : "UgoYKRx2DewAisH2zH1He$$4ODsGpMu6akW5VI89enWR",
+    "sourcePort" : "5qsjhkzC8y1Ms-qBo3TX0$$JvnpXVQ2EYo-MTuPAoten",
+    "target" : "sDcyoq3afhmqf1DBJltMF$$an5nMMsCapxh9mVWHLvuh",
+    "targetPort" : "tTROdeXjUeFnlbw9hn5WE$$TJH0BAMNy8oVT9ruSvl80"
+  }, {
+    "id" : "tAYRNoKTXW8heqhsIUloI$$ftgtwYqsvSbfIjzjherku",
+    "source" : "sDcyoq3afhmqf1DBJltMF$$an5nMMsCapxh9mVWHLvuh",
+    "sourcePort" : "LLhr9Mqs3yUQp4qlV3iS3$$BybZCRVGy8x6gGsjITlmF",
+    "target" : "-VRGkj06W6Zw7EXLwmDha$$0WG3wiftD7fpGfLCiG_8Z",
+    "targetPort" : "82Kd6cNUg9MjOM6w4SRfQ$$yM73aH1LGqzkRcwT-95lO"
   } ],
   "processes" : {
     "X-UzAa5BDx4j9aKY3D692$$zy0yuySpJAbw_PR-caZWA" : {
@@ -96,8 +102,8 @@
       "metadata" : {
         "label" : "immigration-bronze",
         "slug" : "immigration_bronze",
-        "x" : -2220,
-        "y" : -920,
+        "x" : -2800,
+        "y" : -1040,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -119,54 +125,25 @@
         "datasetId" : "datasets/immigration-bronze"
       }
     },
-    "iam8jFcWbPkKnHMD7GzFx$$92FuOlHv0q4yMGwwwFSFj" : {
-      "id" : "iam8jFcWbPkKnHMD7GzFx$$92FuOlHv0q4yMGwwwFSFj",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "airport-codes-bronze",
-        "slug" : "airport_codes_bronze",
-        "x" : -2220,
-        "y" : -760,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Retrieves airport code data for analysis, supporting operations related to travel and logistics.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "I2bYzT8N8EVVcxqLOOrb7$$HMpw0xprPRrk2XdUmdpEz",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/airport-codes-bronze"
-      }
-    },
-    "qv7BRGk3MKrKxU3oDrSHt$$tvFgDcpEKkFVtRHD0lDdT" : {
-      "id" : "qv7BRGk3MKrKxU3oDrSHt$$tvFgDcpEKkFVtRHD0lDdT",
+    "sDcyoq3afhmqf1DBJltMF$$an5nMMsCapxh9mVWHLvuh" : {
+      "id" : "sDcyoq3afhmqf1DBJltMF$$an5nMMsCapxh9mVWHLvuh",
       "component" : "Join",
       "metadata" : {
-        "label" : "join_by_address_cd",
-        "slug" : "join_by_address_cd",
-        "x" : -2040,
-        "y" : -840,
+        "label" : "immigration-bronze_airport-codes-bronze",
+        "slug" : "immigration_bronze_airport_codes_bronze",
+        "x" : -2620,
+        "y" : -980,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Links customer data with country information based on address codes.",
+        "comment" : "Links immigration data with airport codes to provide country names associated with immigration records.",
         "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "toKlXFbfmlIjrn9QffAkp$$jXWcZYdWXnqsCgdpUvqVK",
-          "slug" : "in0",
+          "id" : "2IZMCLCNQGqWGOxSxfOJv$$QkC5zDRU-llu-fWdcKuP7",
+          "slug" : "immigration_bronze",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
@@ -174,7 +151,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for each immigration record.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -183,7 +160,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "CIC ID assigned to the individual; serves as a unique reference for tracking immigration cases.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -192,7 +169,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Year of immigration event; Indicates the year when the immigration record was created.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -201,7 +178,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Month of immigration event; Indicates the month when the immigration record was created.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -210,7 +187,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the city where the immigration event took place.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -219,7 +196,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the country of residence for the individual entering the country.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -228,7 +205,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the port of entry for the immigration event.",
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -237,7 +214,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for the date of arrival, used for tracking immigration events.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -246,7 +223,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the mode of entry into the country; Indicates how the individual arrived.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -255,7 +232,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the address associated with the individual; Typically used for location tracking.",
+                "description" : "State of residence in the U.S. where the individual is staying; Represents the location of the individual's address.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -264,7 +241,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for the departure date of the individual; Used to track when the individual left the country.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -273,7 +250,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicator of the individual's gender; Uses values to represent Male or Female.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -282,7 +259,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for the type of visa issued to the individual.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -291,7 +268,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Number of entries recorded for the individual in the immigration dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -300,7 +277,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the data file associated with the immigration record.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -309,7 +286,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the visa processing location.",
+                "description" : "The location where the visa was issued; Typically represented as a state or country code.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -327,7 +304,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating whether the individual has arrived; Typically marked as 'G' for arrival.",
+                "description" : "Departure status of the individual; Indicates whether the individual has departed or is still present.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -336,7 +313,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the individual has departed from the country.",
+                "description" : "Date of departure from the U.S.; Indicates when the individual left the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -345,7 +322,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the individual's information has been updated.",
+                "description" : "Date of entry into the U.S.; Indicates when the individual arrived in the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -354,7 +331,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the immigration record matches with other data sources.",
+                "description" : "Indicates whether the individual is a matched flag for immigration records.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -363,7 +340,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Year of birth of the individual; Used to determine age.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -372,7 +349,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date when the individual departed; The format is YYYYMMDD.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -381,7 +358,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Gender of the individual; Represented as 'M' for Male and 'F' for Female.",
+                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -390,7 +367,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier assigned by the Immigration and Naturalization Service (INS) for tracking immigration records.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -399,7 +376,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the airline used for travel, typically a 2-3 letter abbreviation.",
+                "description" : "Airline code representing the carrier used for travel.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -408,7 +385,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier assigned to each admission record for tracking purposes.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -417,7 +394,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flight number associated with the immigration entry, indicating the specific flight taken.",
+                "description" : "Flight number associated with the immigration entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -426,7 +403,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual entered the country.",
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -434,61 +411,25 @@
           },
           "isStreaming" : false
         }, {
-          "id" : "wOGws5xYXg45VG1C1oxAo$$sbvl-eIEkcAhEh6KFhinK",
-          "slug" : "in1",
+          "id" : "tTROdeXjUeFnlbw9hn5WE$$TJH0BAMNy8oVT9ruSvl80",
+          "slug" : "airport_codes_bronze",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "IATA",
+              "name" : "Country_Name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The International Air Transport Association (IATA) code for the airport; A unique three-letter code used to identify airports worldwide.",
+                "description" : "Full name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "ICAO",
+              "name" : "Country_code",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The International Civil Aviation Organization code for the airport; A unique four-letter alphanumeric code assigned to each airport.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Airport_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The official name of the airport, which serves as a key identifier for the location.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Country",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The country where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "City",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The city where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Information",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "URL link providing additional information about the airport, including details about its services and facilities.",
+                "description" : "The two-letter postal abbreviation representing each U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -497,7 +438,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "b3QvBxOuZbF48ZpLu1Fde$$WCNFXCvOoFDkucALxmgAb",
+          "id" : "LLhr9Mqs3yUQp4qlV3iS3$$BybZCRVGy8x6gGsjITlmF",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -506,35 +447,130 @@
       },
       "properties" : {
         "conditions" : [ {
-          "alias" : "in1",
+          "alias" : "airport_codes_bronze",
           "expression" : {
             "format" : "sql",
-            "expression" : "in0.address_cd = in1.Country"
+            "expression" : "immigration_bronze.address_cd = airport_codes_bronze.Country_code"
           },
           "joinType" : "inner"
         } ],
-        "expressions" : [ ],
+        "expressions" : [ {
+          "target" : "Country_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "airport_codes_bronze.Country_code"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Country_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "airport_codes_bronze.Country_Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
         "hints" : [ {
-          "id" : "toKlXFbfmlIjrn9QffAkp$$jXWcZYdWXnqsCgdpUvqVK",
-          "alias" : "in0",
+          "id" : "2IZMCLCNQGqWGOxSxfOJv$$QkC5zDRU-llu-fWdcKuP7",
+          "alias" : "immigration_bronze",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "wOGws5xYXg45VG1C1oxAo$$sbvl-eIEkcAhEh6KFhinK",
-          "alias" : "in1",
+          "id" : "tTROdeXjUeFnlbw9hn5WE$$TJH0BAMNy8oVT9ruSvl80",
+          "alias" : "airport_codes_bronze",
           "hintType" : "none",
           "propagateColumns" : false
         } ],
         "allIn1" : null,
-        "activeTab" : "conditions",
-        "columnsSelector" : [ "wOGws5xYXg45VG1C1oxAo$$sbvl-eIEkcAhEh6KFhinK##Country", "toKlXFbfmlIjrn9QffAkp$$jXWcZYdWXnqsCgdpUvqVK##address_cd" ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "tTROdeXjUeFnlbw9hn5WE$$TJH0BAMNy8oVT9ruSvl80##Country_code", "2IZMCLCNQGqWGOxSxfOJv$$QkC5zDRU-llu-fWdcKuP7##address_cd", "tTROdeXjUeFnlbw9hn5WE$$TJH0BAMNy8oVT9ruSvl80##Country_Name", "tTROdeXjUeFnlbw9hn5WE$$TJH0BAMNy8oVT9ruSvl80##Country_code" ],
         "allIn0" : null,
         "whereClause" : null,
-        "headAlias" : "in0"
+        "headAlias" : "immigration_bronze"
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Join",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "UgoYKRx2DewAisH2zH1He$$4ODsGpMu6akW5VI89enWR" : {
+      "id" : "UgoYKRx2DewAisH2zH1He$$4ODsGpMu6akW5VI89enWR",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "us-state-codes-bronze",
+        "slug" : "us_state_codes_bronze",
+        "x" : -2800,
+        "y" : -900,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves state code data for immigration analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "5qsjhkzC8y1Ms-qBo3TX0$$JvnpXVQ2EYo-MTuPAoten",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/us-state-codes-bronze"
+      }
+    },
+    "-VRGkj06W6Zw7EXLwmDha$$0WG3wiftD7fpGfLCiG_8Z" : {
+      "id" : "-VRGkj06W6Zw7EXLwmDha$$0WG3wiftD7fpGfLCiG_8Z",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "I94-Countries",
+        "slug" : "I94_Countries",
+        "x" : -2440,
+        "y" : -980,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "82Kd6cNUg9MjOM6w4SRfQ$$yM73aH1LGqzkRcwT-95lO",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The two-letter postal abbreviation representing each U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/I94-Countries"
       }
     }
   },
