@@ -12,6 +12,7 @@ def pipeline(spark: SparkSession) -> None:
     us_demographics_bronze(spark, df_reformatted_population_data)
     df_global_temps_raw = global_temps_raw(spark)
     df_reformat_temperature_data = reformat_temperature_data(spark, df_global_temps_raw)
+    df_us_state_abbreviations = us_state_abbreviations(spark)
     df_immigration_raw = immigration_raw(spark)
     df_reformatted_data_types = reformatted_data_types(spark, df_immigration_raw)
     immigration_bronze(spark, df_reformatted_data_types)
@@ -19,6 +20,8 @@ def pipeline(spark: SparkSession) -> None:
     df_airport_data_reformat = airport_data_reformat(spark, df_airport_codes_raw)
     global_temps_bronze(spark, df_reformat_temperature_data)
     airport_codes_bronze(spark, df_airport_data_reformat)
+    df_country_name_code = country_name_code(spark, df_us_state_abbreviations)
+    us_state_codes_bronze(spark, df_country_name_code)
 
 def main():
     spark = SparkSession.builder\

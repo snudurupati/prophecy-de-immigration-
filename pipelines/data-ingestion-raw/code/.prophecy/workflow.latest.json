@@ -124,6 +124,18 @@
     "sourcePort" : "edvjoqybLisNTry9wfeLP$$N7c5EGlWyS4Y4cw40MgBz",
     "target" : "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6",
     "targetPort" : "fem22_TgAqvLPllmZv36q$$23AOgqz4vn3EzYShRL8hR"
+  }, {
+    "id" : "1TKt_rRwubT_UgQrYoAyf",
+    "source" : "BgqGx1CKg3LD3fTg-V32z$$GSmUXhijepSDMMqfdQHUN",
+    "sourcePort" : "Lg7CkGGboVvFBppmfms7s$$c9CENM5Yv1wsTe6wPaD_a",
+    "target" : "gIt1CKOminIyQMbJhRH8D$$Hnnbh3wcODN2zg7pN-Nnt",
+    "targetPort" : "HcgZIpV6vhIb79uVoq4I5$$sVqiSE1RwIW4L_E3GY9gi"
+  }, {
+    "id" : "DLMRvGKFc0p1-G4KrZajf$$5ePHuZnZdPoY6nX85J8Ax",
+    "source" : "gIt1CKOminIyQMbJhRH8D$$Hnnbh3wcODN2zg7pN-Nnt",
+    "sourcePort" : "bktTzS_839wCjfTT7PgYr$$_ihc3x336z5_7S0jirp9C",
+    "target" : "aKF_QovOQcWiILbCXC33U$$yDd4CQxnj1Inct6vsK0qV",
+    "targetPort" : "xOrx0e2-fX78YfibmHjkC$$01mtzESYke0H4yZBrE2qX"
   } ],
   "processes" : {
     "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv" : {
@@ -423,6 +435,33 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "BgqGx1CKg3LD3fTg-V32z$$GSmUXhijepSDMMqfdQHUN" : {
+      "id" : "BgqGx1CKg3LD3fTg-V32z$$GSmUXhijepSDMMqfdQHUN",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "us-state-abbreviations",
+        "slug" : "us_state_abbreviations",
+        "x" : -2340,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Lg7CkGGboVvFBppmfms7s$$c9CENM5Yv1wsTe6wPaD_a",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/us-state-abbreviations"
       }
     },
     "CGi6pPN1eXNATWJ8fHuc0$$qqokT_nqSvi3-pTvs-yZR" : {
@@ -1098,6 +1137,83 @@
         "datasetId" : "datasets/airport-codes-bronze"
       }
     },
+    "gIt1CKOminIyQMbJhRH8D$$Hnnbh3wcODN2zg7pN-Nnt" : {
+      "id" : "gIt1CKOminIyQMbJhRH8D$$Hnnbh3wcODN2zg7pN-Nnt",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "country_name_code",
+        "slug" : "country_name_code",
+        "x" : -2080,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts and renames country names and their corresponding codes for easier reference.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HcgZIpV6vhIb79uVoq4I5$$sVqiSE1RwIW4L_E3GY9gi",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Abbreviation",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The two-letter postal abbreviation representing each U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "bktTzS_839wCjfTT7PgYr$$_ihc3x336z5_7S0jirp9C",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "Country_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Name"
+          },
+          "description" : ""
+        }, {
+          "target" : "Country_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Abbreviation"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "HcgZIpV6vhIb79uVoq4I5$$sVqiSE1RwIW4L_E3GY9gi##Name", "HcgZIpV6vhIb79uVoq4I5$$sVqiSE1RwIW4L_E3GY9gi##Abbreviation" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy" : {
       "id" : "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy",
       "component" : "Source",
@@ -1362,6 +1478,56 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "aKF_QovOQcWiILbCXC33U$$yDd4CQxnj1Inct6vsK0qV" : {
+      "id" : "aKF_QovOQcWiILbCXC33U$$yDd4CQxnj1Inct6vsK0qV",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "us-state-codes-bronze",
+        "slug" : "us_state_codes_bronze",
+        "x" : -1800,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xOrx0e2-fX78YfibmHjkC$$01mtzESYke0H4yZBrE2qX",
+          "slug" : "country_name_code",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Country_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The two-letter postal abbreviation representing each U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/us-state-codes-bronze"
       }
     },
     "4XIl3oKw7Jfjtz5DTpIW6$$kY4dnGMyD2Jwe5UhKwy61" : {

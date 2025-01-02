@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: Name
+    type: string
+    nullable: true
+    metadata:
+      description: Full name of the U.S. state.
+      mappings: []
+      tags: []
+  - name: Abbreviation
+    type: string
+    nullable: true
+    metadata:
+      description: The two-letter postal abbreviation representing each U.S. state.
+      mappings: []
+      tags: []

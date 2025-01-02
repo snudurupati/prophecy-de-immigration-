@@ -26,11 +26,13 @@ pipelines:
       - datasets/global-temps-raw
       - datasets/immigration-raw
       - datasets/us-demographics-raw
+      - datasets/us-state-abbreviations
       outputs:
       - datasets/airport-codes-bronze
       - datasets/global-temps-bronze
       - datasets/immigration-bronze
       - datasets/us-demographics-bronze
+      - datasets/us-state-codes-bronze
     subgraphs: []
     dependencies: {}
   pipelines/data-processing-silver:
@@ -166,6 +168,32 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-02 21:43:47'
+  datasets/us-state-abbreviations:
+    name: us-state-abbreviations
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 22:13:55'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 22:13:55'
+  datasets/us-state-codes-bronze:
+    name: us-state-codes-bronze
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 22:17:24'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 22:17:24'
 templates: {}
 jobs: {}
 gemContainer:
