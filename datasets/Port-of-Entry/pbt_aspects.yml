@@ -1,0 +1,25 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: Port_cd
+    type: string
+    nullable: true
+    metadata:
+      description: Code representing the port of entry for the immigration event.
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: The city where the airport is located.
+      mappings: []
+      tags: []
+  - name: Country
+    type: string
+    nullable: true
+    metadata:
+      description: The country where the airport is located.
+      mappings: []
+      tags: []

@@ -43,6 +43,7 @@ pipelines:
     createdAt: '2025-01-02 17:24:55'
     datasets:
       inputs:
+      - datasets/airport-codes-bronze
       - datasets/immigration-bronze
       outputs: []
     subgraphs: []
@@ -152,6 +153,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-02 16:25:51'
+  datasets/Port-of-Entry:
+    name: Port-of-Entry
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 21:43:47'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 21:43:47'
 templates: {}
 jobs: {}
 gemContainer:
