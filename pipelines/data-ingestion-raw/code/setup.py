@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 setup(
-    name = 'data-ingestion-raw',
+    name = 'data-ingestion-bronze',
     version = '1.0',
     packages = find_packages(include = ('dataingestionraw*', )) + ['prophecy_config_instances'],
     package_dir = {'prophecy_config_instances' : 'configs/resources/config'},

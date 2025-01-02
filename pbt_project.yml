@@ -13,7 +13,7 @@ buildSystemDetails:
   createdAt: '2024-12-23 22:13:00'
 pipelines:
   pipelines/data-ingestion-raw:
-    name: data-ingestion-raw
+    name: data-ingestion-bronze
     description: Ingest raw data
     author: sreeram@prophecy.io
     mode: batch
@@ -31,19 +31,6 @@ pipelines:
       - datasets/global-temps-bronze
       - datasets/immigration-bronze
       - datasets/us-demographics-bronze
-    subgraphs: []
-    dependencies: {}
-  pipelines/data-processing-bronze:
-    name: data-processing-bronze
-    description: ''
-    author: sreeram@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2025-01-02 17:17:39'
-    datasets:
-      inputs: []
-      outputs: []
     subgraphs: []
     dependencies: {}
 datasets:
