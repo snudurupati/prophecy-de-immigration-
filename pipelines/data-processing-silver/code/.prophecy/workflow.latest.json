@@ -1,0 +1,426 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.6.0",
+        "pyPiVersion" : "1.9.28"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/data-processing-silver",
+    "sourceSuggestions" : [ {
+      "sourceLabel" : "us_demographics_bronze",
+      "sourceDatasetId" : "datasets/us-demographics-bronze",
+      "canJoinWith" : [ {
+        "processLabel" : "immigration-bronze",
+        "processId" : "vCrZgbYFJh8O_pbcNRM4d$$LrjQdJ8-8Sx5cpmkN9UrV",
+        "joinColumns" : [ "count" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "count" ],
+          "conditions" : [ {
+            "alias" : "us_demographics_bronze",
+            "expression" : "('immigration-bronze'['count'] = us_demographics_bronze.Count)",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "City",
+            "expression" : "us_demographics_bronze.City"
+          }, {
+            "alias" : "State",
+            "expression" : "us_demographics_bronze.State"
+          }, {
+            "alias" : "Median_Age",
+            "expression" : "us_demographics_bronze.Median_Age"
+          }, {
+            "alias" : "Male_Population",
+            "expression" : "us_demographics_bronze.Male_Population"
+          }, {
+            "alias" : "Female_Population",
+            "expression" : "us_demographics_bronze.Female_Population"
+          }, {
+            "alias" : "Total_Population",
+            "expression" : "us_demographics_bronze.Total_Population"
+          }, {
+            "alias" : "Number_of_Veterans",
+            "expression" : "us_demographics_bronze.Number_of_Veterans"
+          }, {
+            "alias" : "Number_Foreign_born",
+            "expression" : "us_demographics_bronze.Number_Foreign_born"
+          }, {
+            "alias" : "Avg_Household_Size",
+            "expression" : "us_demographics_bronze.Avg_Household_Size"
+          }, {
+            "alias" : "State_Code",
+            "expression" : "us_demographics_bronze.State_Code"
+          }, {
+            "alias" : "Race",
+            "expression" : "us_demographics_bronze.Race"
+          }, {
+            "alias" : "uodate_flg",
+            "expression" : "'immigration-bronze'['uodate_flg']"
+          }, {
+            "alias" : "arrival_flg",
+            "expression" : "'immigration-bronze'['arrival_flg']"
+          }, {
+            "alias" : "i94bir",
+            "expression" : "'immigration-bronze'['i94bir']"
+          }, {
+            "alias" : "visatype",
+            "expression" : "'immigration-bronze'['visatype']"
+          }, {
+            "alias" : "year",
+            "expression" : "'immigration-bronze'['year']"
+          }, {
+            "alias" : "entry_mode_id",
+            "expression" : "'immigration-bronze'['entry_mode_id']"
+          }, {
+            "alias" : "month",
+            "expression" : "'immigration-bronze'['month']"
+          }, {
+            "alias" : "arrival_date_id",
+            "expression" : "'immigration-bronze'['arrival_date_id']"
+          }, {
+            "alias" : "birth_year",
+            "expression" : "'immigration-bronze'['birth_year']"
+          }, {
+            "alias" : "visa_post_cd",
+            "expression" : "'immigration-bronze'['visa_post_cd']"
+          }, {
+            "alias" : "match_flg",
+            "expression" : "'immigration-bronze'['match_flg']"
+          }, {
+            "alias" : "i94res",
+            "expression" : "'immigration-bronze'['i94res']"
+          }, {
+            "alias" : "count",
+            "expression" : "'immigration-bronze'['count']"
+          }, {
+            "alias" : "address_cd",
+            "expression" : "'immigration-bronze'['address_cd']"
+          }, {
+            "alias" : "uid",
+            "expression" : "'immigration-bronze'['uid']"
+          }, {
+            "alias" : "departure_date",
+            "expression" : "'immigration-bronze'['departure_date']"
+          }, {
+            "alias" : "admission_number",
+            "expression" : "'immigration-bronze'['admission_number']"
+          }, {
+            "alias" : "occupation",
+            "expression" : "'immigration-bronze'['occupation']"
+          }, {
+            "alias" : "city_id",
+            "expression" : "'immigration-bronze'['city_id']"
+          }, {
+            "alias" : "airline_cd",
+            "expression" : "'immigration-bronze'['airline_cd']"
+          }, {
+            "alias" : "gender_cd",
+            "expression" : "'immigration-bronze'['gender_cd']"
+          }, {
+            "alias" : "cicid",
+            "expression" : "'immigration-bronze'['cicid']"
+          }, {
+            "alias" : "departure_flag",
+            "expression" : "'immigration-bronze'['departure_flag']"
+          }, {
+            "alias" : "departure_date_id",
+            "expression" : "'immigration-bronze'['departure_date_id']"
+          }, {
+            "alias" : "flight_number",
+            "expression" : "'immigration-bronze'['flight_number']"
+          }, {
+            "alias" : "visa_id",
+            "expression" : "'immigration-bronze'['visa_id']"
+          }, {
+            "alias" : "dtad_file_id",
+            "expression" : "'immigration-bronze'['dtad_file_id']"
+          }, {
+            "alias" : "INS_number",
+            "expression" : "'immigration-bronze'['INS_number']"
+          }, {
+            "alias" : "port_cd",
+            "expression" : "'immigration-bronze'['port_cd']"
+          } ],
+          "headAlias" : "datasets/us-demographics-bronze"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "immigration_raw",
+      "sourceDatasetId" : "datasets/immigration-raw",
+      "canJoinWith" : [ {
+        "processLabel" : "immigration-bronze",
+        "processId" : "vCrZgbYFJh8O_pbcNRM4d$$LrjQdJ8-8Sx5cpmkN9UrV",
+        "joinColumns" : [ "visatype", "airline_cd", "gender_cd" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "visatype", "airline_cd", "gender_cd" ],
+          "conditions" : [ {
+            "alias" : "immigration_raw",
+            "expression" : "((('immigration-bronze'['airline_cd'] = immigration_raw.airline) AND ('immigration-bronze'['gender_cd'] = immigration_raw.gender)) AND ('immigration-bronze'['visatype'] = immigration_raw.visatype))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "i94yr",
+            "expression" : "immigration_raw.i94yr"
+          }, {
+            "alias" : "i94mon",
+            "expression" : "immigration_raw.i94mon"
+          }, {
+            "alias" : "i94cit",
+            "expression" : "immigration_raw.i94cit"
+          }, {
+            "alias" : "i94port",
+            "expression" : "immigration_raw.i94port"
+          }, {
+            "alias" : "arrdate",
+            "expression" : "immigration_raw.arrdate"
+          }, {
+            "alias" : "i94mode",
+            "expression" : "immigration_raw.i94mode"
+          }, {
+            "alias" : "i94addr",
+            "expression" : "immigration_raw.i94addr"
+          }, {
+            "alias" : "depdate",
+            "expression" : "immigration_raw.depdate"
+          }, {
+            "alias" : "i94visa",
+            "expression" : "immigration_raw.i94visa"
+          }, {
+            "alias" : "dtadfile",
+            "expression" : "immigration_raw.dtadfile"
+          }, {
+            "alias" : "visapost",
+            "expression" : "immigration_raw.visapost"
+          }, {
+            "alias" : "occup",
+            "expression" : "immigration_raw.occup"
+          }, {
+            "alias" : "entdepa",
+            "expression" : "immigration_raw.entdepa"
+          }, {
+            "alias" : "entdepd",
+            "expression" : "immigration_raw.entdepd"
+          }, {
+            "alias" : "entdepu",
+            "expression" : "immigration_raw.entdepu"
+          }, {
+            "alias" : "matflag",
+            "expression" : "immigration_raw.matflag"
+          }, {
+            "alias" : "biryear",
+            "expression" : "immigration_raw.biryear"
+          }, {
+            "alias" : "dtaddto",
+            "expression" : "immigration_raw.dtaddto"
+          }, {
+            "alias" : "insnum",
+            "expression" : "immigration_raw.insnum"
+          }, {
+            "alias" : "admnum",
+            "expression" : "immigration_raw.admnum"
+          }, {
+            "alias" : "fltno",
+            "expression" : "immigration_raw.fltno"
+          }, {
+            "alias" : "uodate_flg",
+            "expression" : "'immigration-bronze'['uodate_flg']"
+          }, {
+            "alias" : "arrival_flg",
+            "expression" : "'immigration-bronze'['arrival_flg']"
+          }, {
+            "alias" : "i94bir",
+            "expression" : "'immigration-bronze'['i94bir']"
+          }, {
+            "alias" : "visatype",
+            "expression" : "'immigration-bronze'['visatype']"
+          }, {
+            "alias" : "year",
+            "expression" : "'immigration-bronze'['year']"
+          }, {
+            "alias" : "entry_mode_id",
+            "expression" : "'immigration-bronze'['entry_mode_id']"
+          }, {
+            "alias" : "month",
+            "expression" : "'immigration-bronze'['month']"
+          }, {
+            "alias" : "arrival_date_id",
+            "expression" : "'immigration-bronze'['arrival_date_id']"
+          }, {
+            "alias" : "birth_year",
+            "expression" : "'immigration-bronze'['birth_year']"
+          }, {
+            "alias" : "visa_post_cd",
+            "expression" : "'immigration-bronze'['visa_post_cd']"
+          }, {
+            "alias" : "match_flg",
+            "expression" : "'immigration-bronze'['match_flg']"
+          }, {
+            "alias" : "i94res",
+            "expression" : "'immigration-bronze'['i94res']"
+          }, {
+            "alias" : "count",
+            "expression" : "'immigration-bronze'['count']"
+          }, {
+            "alias" : "address_cd",
+            "expression" : "'immigration-bronze'['address_cd']"
+          }, {
+            "alias" : "uid",
+            "expression" : "'immigration-bronze'['uid']"
+          }, {
+            "alias" : "departure_date",
+            "expression" : "'immigration-bronze'['departure_date']"
+          }, {
+            "alias" : "admission_number",
+            "expression" : "'immigration-bronze'['admission_number']"
+          }, {
+            "alias" : "occupation",
+            "expression" : "'immigration-bronze'['occupation']"
+          }, {
+            "alias" : "city_id",
+            "expression" : "'immigration-bronze'['city_id']"
+          }, {
+            "alias" : "airline_cd",
+            "expression" : "'immigration-bronze'['airline_cd']"
+          }, {
+            "alias" : "gender_cd",
+            "expression" : "'immigration-bronze'['gender_cd']"
+          }, {
+            "alias" : "cicid",
+            "expression" : "'immigration-bronze'['cicid']"
+          }, {
+            "alias" : "departure_flag",
+            "expression" : "'immigration-bronze'['departure_flag']"
+          }, {
+            "alias" : "departure_date_id",
+            "expression" : "'immigration-bronze'['departure_date_id']"
+          }, {
+            "alias" : "flight_number",
+            "expression" : "'immigration-bronze'['flight_number']"
+          }, {
+            "alias" : "visa_id",
+            "expression" : "'immigration-bronze'['visa_id']"
+          }, {
+            "alias" : "dtad_file_id",
+            "expression" : "'immigration-bronze'['dtad_file_id']"
+          }, {
+            "alias" : "INS_number",
+            "expression" : "'immigration-bronze'['INS_number']"
+          }, {
+            "alias" : "port_cd",
+            "expression" : "'immigration-bronze'['port_cd']"
+          } ],
+          "headAlias" : "datasets/immigration-raw"
+        }
+      } ]
+    } ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "data-processing-silver",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true
+    },
+    "language" : "python",
+    "fabricId" : "20033",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sreeramprophecyioteam.immigrationdw.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "dataprocessingsilver",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ ],
+  "processes" : {
+    "vCrZgbYFJh8O_pbcNRM4d$$LrjQdJ8-8Sx5cpmkN9UrV" : {
+      "id" : "vCrZgbYFJh8O_pbcNRM4d$$LrjQdJ8-8Sx5cpmkN9UrV",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "immigration-bronze",
+        "slug" : "immigration_bronze",
+        "x" : -780,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves foundational immigration data for analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "e5bZm9EP6uQ8Dyh38BnUc$$2gncz0X8PdSXcU2awa_Q4",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/immigration-bronze"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

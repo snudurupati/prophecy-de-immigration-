@@ -33,6 +33,20 @@ pipelines:
       - datasets/us-demographics-bronze
     subgraphs: []
     dependencies: {}
+  pipelines/data-processing-silver:
+    name: data-processing-silver
+    description: ''
+    author: sreeram@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-01-02 17:24:55'
+    datasets:
+      inputs:
+      - datasets/immigration-bronze
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/immigration-raw:
     name: immigration-raw
