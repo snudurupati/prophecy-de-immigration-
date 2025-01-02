@@ -1,0 +1,89 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the city where the demographic data is collected.
+      mappings: []
+      tags: []
+  - name: State
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the U.S. state where the city is located.
+      mappings: []
+      tags: []
+  - name: Median_Age
+    type: float
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Male_Population
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Female_Population
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Total_Population
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Number_of_Veterans
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Number_Foreign_born
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Avg_Household_Size
+    type: float
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: State_Code
+    type: string
+    nullable: true
+    metadata:
+      description: Abbreviation representing the state; A two-letter code used to
+        identify the state in a standardized format.
+      mappings: []
+      tags: []
+  - name: Race
+    type: string
+    nullable: true
+    metadata:
+      description: The racial or ethnic classification of the population in the city.
+      mappings: []
+      tags: []
+  - name: Count
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

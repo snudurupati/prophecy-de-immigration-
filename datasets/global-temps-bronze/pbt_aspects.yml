@@ -3,26 +3,24 @@ schema:
   type: struct
   fields:
   - name: dt
-    type: string
+    type: date
     nullable: true
     metadata:
-      description: Date of the recorded temperature; Format is YYYY-MM-DD.
+      description: ''
       mappings: []
       tags: []
   - name: AverageTemperature
-    type: string
+    type: float
     nullable: true
     metadata:
-      description: The average temperature recorded for the specified date in degrees
-        Celsius; Values may include 'null' indicating missing data.
+      description: ''
       mappings: []
       tags: []
   - name: AverageTemperatureUncertainty
-    type: string
+    type: float
     nullable: true
     metadata:
-      description: The uncertainty associated with the average temperature measurement,
-        indicating the potential variability in the recorded temperature.
+      description: ''
       mappings: []
       tags: []
   - name: City

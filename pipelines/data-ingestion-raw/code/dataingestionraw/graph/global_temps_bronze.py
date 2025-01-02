@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from dataingestionraw.config.ConfigStore import *
 from dataingestionraw.functions import *
 
-def Reformat_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0
+def global_temps_bronze(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`global_temps_bronze`")

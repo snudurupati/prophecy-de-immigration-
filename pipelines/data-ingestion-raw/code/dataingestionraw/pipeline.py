@@ -7,11 +7,18 @@ from prophecy.utils import *
 from dataingestionraw.graph import *
 
 def pipeline(spark: SparkSession) -> None:
+    df_us_demographics_raw = us_demographics_raw(spark)
+    df_reformatted_population_data = reformatted_population_data(spark, df_us_demographics_raw)
+    us_demographics_bronze(spark, df_reformatted_population_data)
     df_global_temps_raw = global_temps_raw(spark)
-    df_Reformat_1 = Reformat_1(spark, df_global_temps_raw)
+    df_reformat_temperature_data = reformat_temperature_data(spark, df_global_temps_raw)
     df_immigration_raw = immigration_raw(spark)
     df_reformatted_data_types = reformatted_data_types(spark, df_immigration_raw)
     immigration_bronze(spark, df_reformatted_data_types)
+    global_temps_bronze(spark, df_reformat_temperature_data)
+    df_airport_codes_raw = airport_codes_raw(spark)
+    df_reformatted_data = reformatted_data(spark, df_airport_codes_raw)
+    airport_codes_bronze(spark, df_reformatted_data)
 
 def main():
     spark = SparkSession.builder\

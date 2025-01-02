@@ -22,10 +22,15 @@ pipelines:
     createdAt: '2024-12-23 22:13:00'
     datasets:
       inputs:
+      - datasets/airport-codes-raw
       - datasets/global-temps-raw
       - datasets/immigration-raw
+      - datasets/us-demographics-raw
       outputs:
+      - datasets/airport-codes-bronze
+      - datasets/global-temps-bronze
       - datasets/immigration-bronze
+      - datasets/us-demographics-bronze
     subgraphs: []
     dependencies: {}
 datasets:
@@ -68,6 +73,71 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-02 15:15:20'
+  datasets/global-temps-bronze:
+    name: global-temps-bronze
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 15:38:27'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 15:38:27'
+  datasets/airport-codes-raw:
+    name: airport-codes-raw
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 15:58:13'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 15:58:13'
+  datasets/airport-codes-bronze:
+    name: airport-codes-bronze
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 16:04:26'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 16:04:26'
+  datasets/us-demographics-raw:
+    name: us-demographics-raw
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 16:12:39'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 16:12:39'
+  datasets/us-demographics-bronze:
+    name: us-demographics-bronze
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 16:25:51'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 16:25:51'
 templates: {}
 jobs: {}
 gemContainer:

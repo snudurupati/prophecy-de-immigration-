@@ -94,20 +94,192 @@
     "sourcePort" : "qjFIqltb1axZ1AIgQBEbO$$b48-9rkub7TaT3e1p87tI",
     "target" : "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE",
     "targetPort" : "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa"
+  }, {
+    "id" : "J10JAhl9D4aAo-8xCx3CS$$fawbUF4HpOPs9D0IYiCDM",
+    "source" : "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE",
+    "sourcePort" : "E8zAdiWQ35GsGoDBrFfjn$$orHcn3ATe2EEquOcjMc1Y",
+    "target" : "hK0idfKHhEoD7WSTqzLlI$$xO4CCYp_SGgBmGvB7ddcY",
+    "targetPort" : "-SrProBkQOqTlZs2RvrUJ$$oyx_5FmeQz8dWbhrJVmtE"
+  }, {
+    "id" : "9c3BzL2SDymGfP-LE2xO6$$eA7yfXXuB_oCQ7xLFMdzl",
+    "source" : "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy",
+    "sourcePort" : "zNgurFp66GaCmKIdlZEzr$$phuuU2v-p5hw8V-zm8ZhH",
+    "target" : "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN",
+    "targetPort" : "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax"
+  }, {
+    "id" : "LhlUp1XTBOu7XRLN9Asc6$$Fe53GLoQqvmpNJBRd6yS5",
+    "source" : "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN",
+    "sourcePort" : "9NSSxeam_wtq4wbbh9_GU$$3m9Smr2XxE4qNvgwSxpgv",
+    "target" : "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6",
+    "targetPort" : "fem22_TgAqvLPllmZv36q$$23AOgqz4vn3EzYShRL8hR"
+  }, {
+    "id" : "OF6hUodm7qmV09fi1kV5q",
+    "source" : "XdofToQvnK-kL7E4xiaKg$$2jTo-d_zdQhDV59ESdzxj",
+    "sourcePort" : "czwOlGEYge2Seamtra6TN$$8KZqxyRJD7TWDR59E2O9P",
+    "target" : "xeTp2mLWKTT_bWLb4-eWw$$e6qwRh8_JjZ55MRa2dZ34",
+    "targetPort" : "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs"
+  }, {
+    "id" : "_rRhUDStjCA5wXMyKtgj1$$NARF6HeioRAYkTRqY99WT",
+    "source" : "xeTp2mLWKTT_bWLb4-eWw$$e6qwRh8_JjZ55MRa2dZ34",
+    "sourcePort" : "IJVeSnsF8YtLmv6vZ8_xJ$$xfGW-q2vSp8qlJM_ESlKs",
+    "target" : "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv",
+    "targetPort" : "ysrWNsVZKonwxb-ulxri8$$nqQe0jqX2d9qIqlEz1EHL"
   } ],
   "processes" : {
+    "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv" : {
+      "id" : "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "us-demographics-bronze",
+        "slug" : "us_demographics_bronze",
+        "x" : -1800,
+        "y" : -660,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ysrWNsVZKonwxb-ulxri8$$nqQe0jqX2d9qIqlEz1EHL",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the city where the demographic data is collected.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the U.S. state where the city is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Median_Age",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Male_Population",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Female_Population",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Total_Population",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Number_of_Veterans",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Number_Foreign_born",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Avg_Household_Size",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State_Code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviation representing the state; A two-letter code used to identify the state in a standardized format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Race",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The racial or ethnic classification of the population in the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/us-demographics-bronze"
+      }
+    },
     "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE" : {
       "id" : "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "Reformat_1",
-        "slug" : "Reformat_1",
+        "label" : "reformat_temperature_data",
+        "slug" : "reformat_temperature_data",
         "x" : -2080,
         "y" : -1000,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Transforms temperature data into a standardized format for better analysis and reporting.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -120,7 +292,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of the recorded temperature data",
+                "description" : "Date of the recorded temperature; Format is YYYY-MM-DD.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -129,7 +301,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The average temperature recorded for the specified period.",
+                "description" : "The average temperature recorded for the specified date in degrees Celsius; Values may include 'null' indicating missing data.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -138,7 +310,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The uncertainty value associated with the average temperature measurement.",
+                "description" : "The uncertainty associated with the average temperature measurement, indicating the potential variability in the recorded temperature.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -147,7 +319,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Name of the city where the temperature data was recorded",
+                "description" : "Name of the city where the temperature data was recorded.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -156,7 +328,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The country where the temperature data was recorded",
+                "description" : "The name of the country where the temperature data was recorded.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -165,7 +337,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Geographical latitude of the location",
+                "description" : "Geographical latitude of the city; Indicates the north-south position of Århus, Denmark.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -174,7 +346,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The geographical longitude of the location",
+                "description" : "Geographical coordinate indicating the east-west position of Århus, Denmark, expressed in degrees.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -192,10 +364,59 @@
       },
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ ],
+        "expressions" : [ {
+          "target" : "dt",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(dt as date)"
+          },
+          "description" : ""
+        }, {
+          "target" : "AverageTemperature",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(AverageTemperature as float)"
+          },
+          "description" : ""
+        }, {
+          "target" : "AverageTemperatureUncertainty",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(AverageTemperatureUncertainty as float)"
+          },
+          "description" : ""
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "City"
+          },
+          "description" : ""
+        }, {
+          "target" : "Country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Country"
+          },
+          "description" : ""
+        }, {
+          "target" : "Latitude",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Latitude"
+          },
+          "description" : ""
+        }, {
+          "target" : "Longitude",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Longitude"
+          },
+          "description" : ""
+        } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ ]
+        "columnsSelector" : [ "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##Latitude", "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##Country", "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##Longitude", "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##City", "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##AverageTemperature", "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##AverageTemperatureUncertainty", "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa##dt" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -522,6 +743,769 @@
       },
       "properties" : {
         "datasetId" : "datasets/immigration-raw"
+      }
+    },
+    "hK0idfKHhEoD7WSTqzLlI$$xO4CCYp_SGgBmGvB7ddcY" : {
+      "id" : "hK0idfKHhEoD7WSTqzLlI$$xO4CCYp_SGgBmGvB7ddcY",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "global-temps-bronze",
+        "slug" : "global_temps_bronze",
+        "x" : -1800,
+        "y" : -1000,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-SrProBkQOqTlZs2RvrUJ$$oyx_5FmeQz8dWbhrJVmtE",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "dt",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AverageTemperature",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AverageTemperatureUncertainty",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the city where the temperature data was recorded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the country where the temperature data was recorded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Latitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical latitude of the city; Indicates the north-south position of Århus, Denmark.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Longitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical coordinate indicating the east-west position of Århus, Denmark, expressed in degrees.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/global-temps-bronze"
+      }
+    },
+    "XdofToQvnK-kL7E4xiaKg$$2jTo-d_zdQhDV59ESdzxj" : {
+      "id" : "XdofToQvnK-kL7E4xiaKg$$2jTo-d_zdQhDV59ESdzxj",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "us-demographics-raw",
+        "slug" : "us_demographics_raw",
+        "x" : -2340,
+        "y" : -660,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "czwOlGEYge2Seamtra6TN$$8KZqxyRJD7TWDR59E2O9P",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/us-demographics-raw"
+      }
+    },
+    "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN" : {
+      "id" : "NTJ8vQv-OjW1c4IllLg_7$$66_moq_pmRnLhuZkJ1gUN",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformatted_data",
+        "slug" : "reformatted_data",
+        "x" : -2080,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Transforms and standardizes data for better usability and clarity in reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ident",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each airport or heliport, typically a code used for reference.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The classification of the airport or landing area, indicating whether it is a heliport, small airport, or other types.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official name of the airport or heliport.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "elevation_ft",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Height of the airport or heliport above sea level, measured in feet.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "continent",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical continent where the airport is located; In this dataset, it is primarily 'NA' for North America.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "iso_country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO 3166-1 alpha-2 code representing the country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "iso_region",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO code representing the specific region within the country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "municipality",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the city or town where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gps_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "GPS code assigned to the airport; This code is used for navigation and identification purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "iata_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The International Air Transport Association (IATA) code for the airport; Typically a three-letter code used for ticketing and baggage handling.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "local_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique local identifier for the airport or heliport, often used for internal reference.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "coordinates",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical coordinates of the airport; Represents the longitude and latitude in the format 'longitude, latitude'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "9NSSxeam_wtq4wbbh9_GU$$3m9Smr2XxE4qNvgwSxpgv",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ident"
+          },
+          "description" : ""
+        }, {
+          "target" : "type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "type"
+          },
+          "description" : ""
+        }, {
+          "target" : "name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "name"
+          },
+          "description" : ""
+        }, {
+          "target" : "elevation_ft",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(elevation_ft as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "continent",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "continent"
+          },
+          "description" : ""
+        }, {
+          "target" : "iso_country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "iso_country"
+          },
+          "description" : ""
+        }, {
+          "target" : "iso_region",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "iso_region"
+          },
+          "description" : ""
+        }, {
+          "target" : "municipality",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "municipality"
+          },
+          "description" : ""
+        }, {
+          "target" : "gps_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "gps_code"
+          },
+          "description" : ""
+        }, {
+          "target" : "iata_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "iata_code"
+          },
+          "description" : ""
+        }, {
+          "target" : "local_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "local_code"
+          },
+          "description" : ""
+        }, {
+          "target" : "coordinates",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "coordinates"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##name", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##iso_region", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##ident", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##municipality", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##local_code", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##iso_country", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##iata_code", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##continent", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##gps_code", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##coordinates", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##type", "fVt20WhyRC8oU2Fg9xgGY$$qlnyC2SjXrtRdijVlK0Ax##elevation_ft" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6" : {
+      "id" : "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "airport-codes-bronze",
+        "slug" : "airport_codes_bronze",
+        "x" : -1800,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fem22_TgAqvLPllmZv36q$$23AOgqz4vn3EzYShRL8hR",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each airport or heliport, typically a code used for reference.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The classification of the airport or landing area, indicating whether it is a heliport, small airport, or other types.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official name of the airport or heliport.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "elevation_ft",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "continent",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical continent where the airport is located; In this dataset, it is primarily 'NA' for North America.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "iso_country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO 3166-1 alpha-2 code representing the country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "iso_region",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO code representing the specific region within the country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "municipality",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the city or town where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gps_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "GPS code assigned to the airport; This code is used for navigation and identification purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "iata_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The International Air Transport Association (IATA) code for the airport; Typically a three-letter code used for ticketing and baggage handling.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "local_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique local identifier for the airport or heliport, often used for internal reference.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "coordinates",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical coordinates of the airport; Represents the longitude and latitude in the format 'longitude, latitude'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/airport-codes-bronze"
+      }
+    },
+    "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy" : {
+      "id" : "xjJylgvzffvQrLwGCsBJY$$hn187j2-5A12mLUSssxUy",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "airport-codes-raw",
+        "slug" : "airport_codes_raw",
+        "x" : -2340,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "zNgurFp66GaCmKIdlZEzr$$phuuU2v-p5hw8V-zm8ZhH",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/airport-codes-raw"
+      }
+    },
+    "xeTp2mLWKTT_bWLb4-eWw$$e6qwRh8_JjZ55MRa2dZ34" : {
+      "id" : "xeTp2mLWKTT_bWLb4-eWw$$e6qwRh8_JjZ55MRa2dZ34",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformatted_population_data",
+        "slug" : "reformatted_population_data",
+        "x" : -2080,
+        "y" : -660,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Transforms population data into a more accessible format, making it easier to analyze demographic information by city and state.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the city where the demographic data is collected.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the U.S. state where the city is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Median Age",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The median age of the population in the city, indicating the midpoint of age distribution.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Male Population",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of males residing in the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Female Population",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of females residing in the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Total Population",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total number of individuals residing in the city, representing the overall demographic size.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Number of Veterans",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total count of veterans residing in the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Foreign-born",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of individuals in the city who were born outside the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average Household Size",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Average number of individuals living in a household within the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "State Code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviation representing the state; A two-letter code used to identify the state in a standardized format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Race",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The racial or ethnic classification of the population in the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Count",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of individuals belonging to a specific racial or ethnic group within the city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "IJVeSnsF8YtLmv6vZ8_xJ$$xfGW-q2vSp8qlJM_ESlKs",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "City"
+          },
+          "description" : ""
+        }, {
+          "target" : "State",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "State"
+          },
+          "description" : ""
+        }, {
+          "target" : "Median_Age",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Median Age` as float)"
+          },
+          "description" : ""
+        }, {
+          "target" : "Male_Population",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Male Population` as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "Female_Population",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Female Population` as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "Total_Population",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Total Population` as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "Number_of_Veterans",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Number of Veterans` as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "Number_Foreign_born",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Foreign-born` as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "Avg_Household_Size",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(`Average Household Size` as float)"
+          },
+          "description" : ""
+        }, {
+          "target" : "State_Code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`State Code`"
+          },
+          "description" : ""
+        }, {
+          "target" : "Race",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Race"
+          },
+          "description" : ""
+        }, {
+          "target" : "Count",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(Count as integer)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##City", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##State", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Median Age", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Female Population", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Male Population", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Total Population", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Race", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Average Household Size", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##State Code", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Number of Veterans", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Foreign-born", "bOoTdYJP36NC7lhPUTd-e$$wab71kup-Z37Dmtn-VCTs##Count" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "4XIl3oKw7Jfjtz5DTpIW6$$kY4dnGMyD2Jwe5UhKwy61" : {
