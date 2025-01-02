@@ -1,0 +1,53 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: dt
+    type: string
+    nullable: true
+    metadata:
+      description: Date of the recorded temperature data
+      mappings: []
+      tags: []
+  - name: AverageTemperature
+    type: string
+    nullable: true
+    metadata:
+      description: The average temperature recorded for the specified period.
+      mappings: []
+      tags: []
+  - name: AverageTemperatureUncertainty
+    type: string
+    nullable: true
+    metadata:
+      description: The uncertainty value associated with the average temperature measurement.
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the city where the temperature data was recorded
+      mappings: []
+      tags: []
+  - name: Country
+    type: string
+    nullable: true
+    metadata:
+      description: The country where the temperature data was recorded
+      mappings: []
+      tags: []
+  - name: Latitude
+    type: string
+    nullable: true
+    metadata:
+      description: Geographical latitude of the location
+      mappings: []
+      tags: []
+  - name: Longitude
+    type: string
+    nullable: true
+    metadata:
+      description: The geographical longitude of the location
+      mappings: []
+      tags: []

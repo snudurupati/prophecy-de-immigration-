@@ -22,6 +22,7 @@ pipelines:
     createdAt: '2024-12-23 22:13:00'
     datasets:
       inputs:
+      - datasets/global-temps-raw
       - datasets/immigration-raw
       outputs:
       - datasets/immigration-bronze
@@ -54,6 +55,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2024-12-23 23:15:46'
+  datasets/global-temps-raw:
+    name: global-temps-raw
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-02 15:15:20'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-02 15:15:20'
 templates: {}
 jobs: {}
 gemContainer:

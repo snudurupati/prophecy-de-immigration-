@@ -48,7 +48,8 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Port of entry for the immigration record
+      description: Port of entry into the United States; Represents the code for the
+        location where the individual arrived.
       mappings: []
       tags: []
   - name: arrival_date_id
@@ -69,7 +70,8 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Address where the individual will stay in the U.S.
+      description: State of residence in the U.S. where the individual is staying;
+        Represents the location of the individual's address.
       mappings: []
       tags: []
   - name: departure_date_id
@@ -111,42 +113,48 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: The visa post where the visa was issued
+      description: The location where the visa was issued; Typically represented as
+        a state or country code.
       mappings: []
       tags: []
   - name: occupation
     type: string
     nullable: true
     metadata:
-      description: Occupation of the individual entering the country
+      description: Occupation of the individual; Indicates the job or profession of
+        the immigrant.
       mappings: []
       tags: []
   - name: arrival_flg
     type: string
     nullable: true
     metadata:
-      description: Departure status of the individual
+      description: Departure status of the individual; Indicates whether the individual
+        has departed or is still present.
       mappings: []
       tags: []
   - name: departure_flag
     type: string
     nullable: true
     metadata:
-      description: Date of departure from the U.S.
+      description: Date of departure from the U.S.; Indicates when the individual
+        left the country.
       mappings: []
       tags: []
   - name: uodate_flg
     type: string
     nullable: true
     metadata:
-      description: Date of entry into the U.S.
+      description: Date of entry into the U.S.; Indicates when the individual arrived
+        in the country.
       mappings: []
       tags: []
   - name: match_flg
     type: string
     nullable: true
     metadata:
-      description: Indicates if the individual is a matched record
+      description: Indicates whether the individual is a matched flag for immigration
+        records.
       mappings: []
       tags: []
   - name: birth_year
@@ -167,7 +175,8 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Gender of the individual entering the country
+      description: Gender of the individual; Values include 'M' for Male and 'F' for
+        Female.
       mappings: []
       tags: []
   - name: INS_number
@@ -181,7 +190,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Airline carrier used for the immigration journey
+      description: Airline code representing the carrier used for travel.
       mappings: []
       tags: []
   - name: admission_number
@@ -195,13 +204,14 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Flight number associated with the individual's arrival
+      description: Flight number associated with the immigration entry.
       mappings: []
       tags: []
   - name: visatype
     type: string
     nullable: true
     metadata:
-      description: Type of visa held by the individual
+      description: Type of visa issued to the individual; Indicates the category of
+        visa under which the individual is allowed entry.
       mappings: []
       tags: []

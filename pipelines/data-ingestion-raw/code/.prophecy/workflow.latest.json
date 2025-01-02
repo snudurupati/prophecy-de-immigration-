@@ -88,27 +88,102 @@
     "sourcePort" : "H7D9Uzyw9XD3Zaxm_FW1y$$tHcQQRp6gsRM9F_JvPsg3",
     "target" : "CGi6pPN1eXNATWJ8fHuc0$$qqokT_nqSvi3-pTvs-yZR",
     "targetPort" : "ugQyM_TMQphwZ-jmO3BKG$$ab3uU-FFME-LLlyxloqlb"
+  }, {
+    "id" : "j3Cn8lYzb7eZUovZZeiog$$7c1VIKn373QwyMpD2SfPx",
+    "source" : "4XIl3oKw7Jfjtz5DTpIW6$$kY4dnGMyD2Jwe5UhKwy61",
+    "sourcePort" : "qjFIqltb1axZ1AIgQBEbO$$b48-9rkub7TaT3e1p87tI",
+    "target" : "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE",
+    "targetPort" : "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa"
   } ],
   "processes" : {
-    "8CX8F_5qZ7U7P7A32QBf0$$sZ-ttcM3VMmIePgJnUOmD" : {
-      "id" : "8CX8F_5qZ7U7P7A32QBf0$$sZ-ttcM3VMmIePgJnUOmD",
-      "component" : "Source",
+    "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE" : {
+      "id" : "c3dKxW2dV_4X10hSIfZ3O$$d1kZOZOdUghYq65CXhJOE",
+      "component" : "Reformat",
       "metadata" : {
-        "label" : "immigration-raw",
-        "slug" : "immigration_raw",
-        "x" : -1900,
-        "y" : -880,
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -2080,
+        "y" : -1000,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Loads immigration data for analysis, providing insights into patterns and trends in immigration activities.",
-        "autoUpdateComment" : true
+        "isImported" : false
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "kLBBjUs5SEfov-zeHirfY$$ri33Je7gqJQf7mmNLElNa",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "dt",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of the recorded temperature data",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AverageTemperature",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The average temperature recorded for the specified period.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AverageTemperatureUncertainty",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The uncertainty value associated with the average temperature measurement.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the city where the temperature data was recorded",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The country where the temperature data was recorded",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Latitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical latitude of the location",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Longitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The geographical longitude of the location",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
         "outputs" : [ {
-          "id" : "xDbLPPJCjx1LVmwrMKctk$$nkZE4DXmhy7MveSmoJATV",
+          "id" : "E8zAdiWQ35GsGoDBrFfjn$$orHcn3ATe2EEquOcjMc1Y",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -116,7 +191,15 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/immigration-raw"
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "CGi6pPN1eXNATWJ8fHuc0$$qqokT_nqSvi3-pTvs-yZR" : {
@@ -125,8 +208,8 @@
       "metadata" : {
         "label" : "immigration-bronze",
         "slug" : "immigration_bronze",
-        "x" : -1360,
-        "y" : -880,
+        "x" : -1800,
+        "y" : -1180,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -197,7 +280,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Port of entry for the immigration record",
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -224,7 +307,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Address where the individual will stay in the U.S.",
+                "description" : "State of residence in the U.S. where the individual is staying; Represents the location of the individual's address.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -278,7 +361,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The visa post where the visa was issued",
+                "description" : "The location where the visa was issued; Typically represented as a state or country code.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -287,7 +370,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Occupation of the individual entering the country",
+                "description" : "Occupation of the individual; Indicates the job or profession of the immigrant.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -296,7 +379,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Departure status of the individual",
+                "description" : "Departure status of the individual; Indicates whether the individual has departed or is still present.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -305,7 +388,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of departure from the U.S.",
+                "description" : "Date of departure from the U.S.; Indicates when the individual left the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -314,7 +397,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of entry into the U.S.",
+                "description" : "Date of entry into the U.S.; Indicates when the individual arrived in the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -323,7 +406,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if the individual is a matched record",
+                "description" : "Indicates whether the individual is a matched flag for immigration records.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -350,7 +433,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Gender of the individual entering the country",
+                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -368,7 +451,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Airline carrier used for the immigration journey",
+                "description" : "Airline code representing the carrier used for travel.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -386,7 +469,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flight number associated with the individual's arrival",
+                "description" : "Flight number associated with the immigration entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -395,7 +478,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Type of visa held by the individual",
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -412,14 +495,72 @@
         "datasetId" : "datasets/immigration-bronze"
       }
     },
+    "8CX8F_5qZ7U7P7A32QBf0$$sZ-ttcM3VMmIePgJnUOmD" : {
+      "id" : "8CX8F_5qZ7U7P7A32QBf0$$sZ-ttcM3VMmIePgJnUOmD",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "immigration-raw",
+        "slug" : "immigration_raw",
+        "x" : -2340,
+        "y" : -1180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads immigration data for analysis, providing insights into patterns and trends in immigration activities.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xDbLPPJCjx1LVmwrMKctk$$nkZE4DXmhy7MveSmoJATV",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/immigration-raw"
+      }
+    },
+    "4XIl3oKw7Jfjtz5DTpIW6$$kY4dnGMyD2Jwe5UhKwy61" : {
+      "id" : "4XIl3oKw7Jfjtz5DTpIW6$$kY4dnGMyD2Jwe5UhKwy61",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "global-temps-raw",
+        "slug" : "global_temps_raw",
+        "x" : -2340,
+        "y" : -1000,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads global temperature data by city, providing insights into climate trends and variations across different regions.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "qjFIqltb1axZ1AIgQBEbO$$b48-9rkub7TaT3e1p87tI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/global-temps-raw"
+      }
+    },
     "PiXBGToX-7yFx78mQmdNQ$$di_Lzl8DCzQoNDlgLlNhj" : {
       "id" : "PiXBGToX-7yFx78mQmdNQ$$di_Lzl8DCzQoNDlgLlNhj",
       "component" : "Reformat",
       "metadata" : {
         "label" : "reformatted_data_types",
         "slug" : "reformatted_data_types",
-        "x" : -1640,
-        "y" : -880,
+        "x" : -2080,
+        "y" : -1180,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -438,7 +579,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "An internal identifier for the record",
+                "description" : "Unique identifier for each immigration record.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -447,7 +588,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The unique identifier assigned to each immigration case",
+                "description" : "CIC ID associated with the immigration record; serves as a reference number.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -456,7 +597,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Year of the immigration record",
+                "description" : "Year of arrival in the United States; Represents the year in which the immigration event occurred.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -465,7 +606,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Month of the immigration record",
+                "description" : "Month of arrival in the United States; Indicates the month in which the immigration event took place.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -474,7 +615,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Country of citizenship of the individual",
+                "description" : "Country of citizenship of the individual entering the U.S.; Represented by a numeric code.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -483,7 +624,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Country of residence of the individual",
+                "description" : "Country of residence of the individual; Represented by a numeric code.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -492,7 +633,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Port of entry for the immigration record",
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -501,7 +642,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of arrival into the country",
+                "description" : "Date of arrival in the United States; Format is a numeric representation of the date.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -510,7 +651,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Mode of transportation used for entry",
+                "description" : "Mode of transportation used by the individual upon arrival; Indicates how the individual entered the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -519,7 +660,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Address where the individual will stay in the U.S.",
+                "description" : "State of residence in the U.S. where the individual is staying; Represents the location of the individual's address.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -528,7 +669,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of departure from the country",
+                "description" : "Date of departure from the United States; Format is YYYYMMDD.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -537,7 +678,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Birth year of the individual",
+                "description" : "Age of the individual at the time of entry into the United States.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -546,7 +687,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Visa type of the individual entering the country",
+                "description" : "Type of visa under which the individual entered the country; Indicates the category of the visa.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -555,7 +696,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Count of entries for the individual in the dataset",
+                "description" : "Count of individuals in the record; Represents the number of entries associated with the visa.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -564,7 +705,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date when the immigration data file was created",
+                "description" : "Date when the admission file was created; Format is YYYYMMDD.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -573,7 +714,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The visa post where the visa was issued",
+                "description" : "The location where the visa was issued; Typically represented as a state or country code.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -582,7 +723,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Occupation of the individual entering the country",
+                "description" : "Occupation of the individual; Indicates the job or profession of the immigrant.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -591,7 +732,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Departure status of the individual",
+                "description" : "Departure status of the individual; Indicates whether the individual has departed or is still present.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -600,7 +741,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of departure from the U.S.",
+                "description" : "Date of departure from the U.S.; Indicates when the individual left the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -609,7 +750,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date of entry into the U.S.",
+                "description" : "Date of entry into the U.S.; Indicates when the individual arrived in the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -618,7 +759,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if the individual is a matched record",
+                "description" : "Indicates whether the individual is a matched flag for immigration records.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -627,7 +768,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Year of birth of the individual",
+                "description" : "Year of birth of the individual; Represents the year when the individual was born.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -636,7 +777,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date until which the immigration record is valid",
+                "description" : "Date until which the immigration record is valid; Format is MMDDYYYY.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -645,7 +786,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Gender of the individual entering the country",
+                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -654,7 +795,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Insurance number associated with the immigration record",
+                "description" : "Insurance number associated with the individual; Used for tracking immigration status.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -663,7 +804,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Airline carrier used for the immigration journey",
+                "description" : "Airline code representing the carrier used for travel.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -672,7 +813,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Admission number assigned to the individual upon entry",
+                "description" : "Unique admission number assigned to each immigration entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -681,7 +822,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flight number associated with the individual's arrival",
+                "description" : "Flight number associated with the immigration entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -690,7 +831,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Type of visa held by the individual",
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -914,7 +1055,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94addr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mode", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##cicid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##occup", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visatype", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##depdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##matflag", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepu", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##admnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##arrdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##count", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##uid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mon", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94port", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepd", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94yr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94res", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94cit", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtaddto", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##biryear", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##fltno", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtadfile", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##gender", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##airline", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##insnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94visa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94bir", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visapost" ]
+        "columnsSelector" : [ "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##gender", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##biryear", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtaddto", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##admnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtadfile", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##depdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visapost", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepu", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94bir", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##cicid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##insnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##count", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mon", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94cit", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepd", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visatype", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94addr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##arrdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##fltno", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94res", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##airline", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##uid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##occup", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##matflag", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94visa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mode", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94yr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94port" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
