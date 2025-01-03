@@ -6,154 +6,158 @@ schema:
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: CIC ID assigned to the individual; serves as a unique reference
+        for tracking immigration cases.
       mappings: []
       tags: []
   - name: year
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Year of immigration event; Indicates the year when the immigration
+        record was created.
       mappings: []
       tags: []
   - name: city_id
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Identifier for the city where the immigration event took place.
       mappings: []
       tags: []
   - name: i94res
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Code representing the country of residence for the individual entering
+        the country.
       mappings: []
       tags: []
   - name: port_cd
     type: string
     nullable: true
     metadata:
-      description: Port of entry into the United States; Represents the code for the
-        location where the individual arrived.
+      description: Code representing the port of entry for the immigration event.
       mappings: []
       tags: []
   - name: arrival_date_id
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Unique identifier for the date of arrival, used for tracking immigration
+        events.
       mappings: []
       tags: []
   - name: entry_mode_id
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Identifier for the mode of entry into the country; Indicates how
+        the individual arrived.
       mappings: []
       tags: []
   - name: address_cd
     type: string
     nullable: true
     metadata:
-      description: State of residence in the U.S. where the individual is staying;
-        Represents the location of the individual's address.
+      description: Code representing the address associated with the individual; Typically
+        used for location tracking.
       mappings: []
       tags: []
   - name: departure_date_id
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Unique identifier for the departure date of the individual; Used
+        to track when the individual left the country.
       mappings: []
       tags: []
   - name: i94bir
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Indicator of the individual's gender; Uses values to represent
+        Male or Female.
       mappings: []
       tags: []
   - name: visa_id
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Unique identifier for the type of visa issued to the individual.
       mappings: []
       tags: []
   - name: count
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Number of entries recorded for the individual in the immigration
+        dataset.
       mappings: []
       tags: []
   - name: dtad_file_id
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Identifier for the data file associated with the immigration record.
       mappings: []
       tags: []
   - name: visa_post_cd
     type: string
     nullable: true
     metadata:
-      description: The location where the visa was issued; Typically represented as
-        a state or country code.
+      description: Code representing the visa processing location.
       mappings: []
       tags: []
   - name: arrival_flg
     type: string
     nullable: true
     metadata:
-      description: Departure status of the individual; Indicates whether the individual
-        has departed or is still present.
+      description: Flag indicating whether the individual has arrived; Typically marked
+        as 'G' for arrival.
       mappings: []
       tags: []
   - name: departure_flag
     type: string
     nullable: true
     metadata:
-      description: Date of departure from the U.S.; Indicates when the individual
-        left the country.
+      description: Indicates whether the individual has departed from the country.
       mappings: []
       tags: []
   - name: uodate_flg
     type: string
     nullable: true
     metadata:
-      description: Date of entry into the U.S.; Indicates when the individual arrived
-        in the country.
+      description: Flag indicating if the individual's information has been updated.
       mappings: []
       tags: []
   - name: match_flg
     type: string
     nullable: true
     metadata:
-      description: Indicates whether the individual is a matched flag for immigration
-        records.
+      description: Indicates whether the immigration record matches with other data
+        sources.
       mappings: []
       tags: []
   - name: birth_year
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Year of birth of the individual; Used to determine age.
       mappings: []
       tags: []
   - name: departure_date
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Date when the individual departed; The format is YYYYMMDD.
       mappings: []
       tags: []
   - name: gender_cd
     type: string
     nullable: true
     metadata:
-      description: Gender of the individual; Values include 'M' for Male and 'F' for
+      description: Gender of the individual; Represented as 'M' for Male and 'F' for
         Female.
       mappings: []
       tags: []
@@ -161,27 +165,31 @@ schema:
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Unique identifier assigned by the Immigration and Naturalization
+        Service (INS) for tracking immigration records.
       mappings: []
       tags: []
   - name: airline_cd
     type: string
     nullable: true
     metadata:
-      description: Airline code representing the carrier used for travel.
+      description: Code representing the airline used for travel, typically a 2-3
+        letter abbreviation.
       mappings: []
       tags: []
   - name: admission_number
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Unique identifier assigned to each admission record for tracking
+        purposes.
       mappings: []
       tags: []
   - name: flight_number
     type: string
     nullable: true
     metadata:
-      description: Flight number associated with the immigration entry.
+      description: Flight number associated with the immigration entry, indicating
+        the specific flight taken.
       mappings: []
       tags: []
