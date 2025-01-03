@@ -20,46 +20,43 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: The full name of the country associated with the country code.
+      description: The name of the U.S. state.
       mappings: []
       tags: []
   - name: visa_subtype_cd
     type: string
     nullable: true
     metadata:
-      description: Code representing the specific subtype of the visa, indicating
-        the purpose of travel.
+      description: Type of visa issued to the individual; Indicates the category of
+        visa under which the individual is allowed entry.
       mappings: []
       tags: []
   - name: visa_type_desc
     type: string
     nullable: true
     metadata:
-      description: Description of the visa type; Indicates the purpose of the visa,
-        such as 'Pleasure' or 'Business'.
+      description: ''
       mappings: []
       tags: []
   - name: gender_desc
     type: string
     nullable: true
     metadata:
-      description: Description of the gender category; Provides a human-readable label
-        for gender codes.
+      description: ''
       mappings: []
       tags: []
   - name: entry_mode_desc
     type: string
     nullable: true
     metadata:
-      description: Description of the mode of entry; Indicates how the entry was made,
-        such as 'Land' or 'Unknown'.
+      description: ''
       mappings: []
       tags: []
   - name: Date
     type: date
     nullable: true
     metadata:
-      description: The specific date represented in the format YYYY-MM-DD.
+      description: The specific date represented in the dataset, formatted as YYYY-MM-DD.
       mappings: []
       tags: []
   - name: DateLongDescription
@@ -67,15 +64,15 @@ schema:
     nullable: true
     metadata:
       description: Full descriptive representation of the date, including the day
-        of the week and the full month name.
+        of the week, month, day, and year.
       mappings: []
       tags: []
   - name: CalendarMonth
     type: integer
     nullable: true
     metadata:
-      description: The month number of the date, ranging from 1 for January to 12
-        for December.
+      description: The month number of the year when the date falls, ranging from
+        1 for January to 12 for December.
       mappings: []
       tags: []
   - name: CalendarDay
@@ -98,23 +95,22 @@ schema:
     type: integer
     nullable: true
     metadata:
-      description: The year of the date represented as a four-digit integer.
+      description: The year of the date, represented as a four-digit integer.
       mappings: []
       tags: []
   - name: Airport_Name
     type: string
     nullable: true
     metadata:
-      description: Name of the airport; Represents the official name of the airport
-        facility.
+      description: The official name of the airport, which serves as a key identifier
+        for the location.
       mappings: []
       tags: []
   - name: City
     type: string
     nullable: true
     metadata:
-      description: The city where the airport is located; Currently, this column does
-        not contain any data.
+      description: The city where the airport is located.
       mappings: []
       tags: []
   - name: total_visits

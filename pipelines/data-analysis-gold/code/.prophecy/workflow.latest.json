@@ -216,7 +216,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for each immigration record.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -225,7 +225,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Year of the immigration event.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -234,7 +234,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the city where the immigrant is arriving.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -243,7 +243,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the country of residence of the immigrant.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -252,7 +252,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the port of entry for the immigration event.",
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -261,7 +261,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for the date of arrival; Represents the date when the individual entered the country.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -270,7 +270,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the mode of entry into the country; Indicates how the individual arrived.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -279,7 +279,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the address of the individual; Used for tracking residency or destination.",
+                "description" : "State of residence in the U.S. where the individual is staying; Represents the location of the individual's address.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -288,7 +288,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the date of departure; Represents the date when the individual left the country.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -297,7 +297,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Birth year of the individual; Indicates the year of birth for demographic analysis.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -306,7 +306,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the type of visa issued to the immigrant.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -315,7 +315,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Number of entries recorded for the immigrant in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -324,7 +324,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the file containing immigration data; Used for tracking and referencing the source of the data.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -333,7 +333,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the visa processing location; Indicates where the visa was issued.",
+                "description" : "The location where the visa was issued; Typically represented as a state or country code.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -342,7 +342,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the individual has arrived in the country.",
+                "description" : "Departure status of the individual; Indicates whether the individual has departed or is still present.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -351,7 +351,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the individual has departed from the country.",
+                "description" : "Date of departure from the U.S.; Indicates when the individual left the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -360,7 +360,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating whether the record has been updated.",
+                "description" : "Date of entry into the U.S.; Indicates when the individual arrived in the country.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -369,7 +369,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating whether the immigration record matches with other data sources.",
+                "description" : "Indicates whether the individual is a matched flag for immigration records.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -378,7 +378,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Year of birth of the individual; Indicates the age of the immigrant.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -387,7 +387,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Date when the individual departed; Format is YYYYMMDD.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -396,7 +396,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Gender of the individual; Indicates whether the individual is Male (M) or Female (F).",
+                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -405,7 +405,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identification number assigned by the Immigration and Naturalization Service (INS) to track the individual's immigration record.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -414,7 +414,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the airline used for the immigration entry.",
+                "description" : "Airline code representing the carrier used for travel.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -423,7 +423,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier assigned to each admission record for tracking purposes.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -432,7 +432,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Identifier for the flight associated with the immigration record; Represents the flight number used during entry.",
+                "description" : "Flight number associated with the immigration entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -449,7 +449,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The unique two-letter code representing each country.",
+                "description" : "Two-letter abbreviation representing the state within the United States.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -458,7 +458,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The full name of the country associated with the country code.",
+                "description" : "The name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -475,7 +475,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for each type of visa, categorizing them into different classifications.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -484,7 +484,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the specific subtype of the visa, indicating the purpose of travel.",
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -493,7 +493,7 @@
               "type" : "string",
               "nullable" : false,
               "metadata" : {
-                "description" : "Description of the visa type; Indicates the purpose of the visa, such as 'Pleasure' or 'Business'.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -510,7 +510,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The International Air Transport Association (IATA) code representing the airport; Typically a three-letter code used for airline operations.",
+                "description" : "The three-letter code assigned to each airport, used for ticketing and travel itineraries.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -528,7 +528,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Name of the airport; Represents the official name of the airport facility.",
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -537,7 +537,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Name of the country where the airport is located.",
+                "description" : "The country where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -546,7 +546,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The city where the airport is located; Currently, this column does not contain any data.",
+                "description" : "The city where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -555,7 +555,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Additional details or notes about the airport; Currently not populated.",
+                "description" : "URL link providing additional information about the airport, including details and statistics.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -572,7 +572,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the gender; Includes values such as 'F' for Female and 'X' for Unknown.",
+                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -581,7 +581,7 @@
               "type" : "string",
               "nullable" : false,
               "metadata" : {
-                "description" : "Description of the gender category; Provides a human-readable label for gender codes.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -598,7 +598,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for each entry mode used in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -607,7 +607,7 @@
               "type" : "string",
               "nullable" : false,
               "metadata" : {
-                "description" : "Description of the mode of entry; Indicates how the entry was made, such as 'Land' or 'Unknown'.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -624,7 +624,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique identifier for each date, formatted as YYYYMMDD.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -633,7 +633,7 @@
               "type" : "date",
               "nullable" : true,
               "metadata" : {
-                "description" : "The specific date represented in the format YYYY-MM-DD.",
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -642,7 +642,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Full descriptive representation of the date, including the day of the week and the full month name.",
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -651,7 +651,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "A concise representation of the date, formatted as 'MMM D, YYYY' for quick reference.",
+                "description" : "A concise representation of the date, formatted as 'MMM DD, YYYY'.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -660,7 +660,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Full name of the day of the week for the given date.",
+                "description" : "Full name of the day of the week for each date.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -669,7 +669,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Abbreviated name of the day of the week, represented in a three-letter format.",
+                "description" : "Abbreviated name of the day of the week, represented in three letters.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -678,7 +678,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Full name of the month corresponding to the date.",
+                "description" : "Full name of the month for the given date.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -687,7 +687,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Abbreviated name of the month; Represents the month in a short format, such as 'Jan' for January.",
+                "description" : "Abbreviated name of the month; Represents the month in a shortened format (e.g., 'Jan' for January).",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -705,7 +705,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The week number of the year in which the date falls, used for weekly reporting and analysis.",
+                "description" : "The week number of the year in which the date falls, indicating the sequential order of weeks.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -723,7 +723,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The month number of the date, ranging from 1 for January to 12 for December.",
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -741,7 +741,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The year of the date represented as a four-digit integer.",
+                "description" : "The year of the date, represented as a four-digit integer.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1109,7 +1109,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The full name of the country associated with the country code.",
+                "description" : "The name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1118,7 +1118,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the specific subtype of the visa, indicating the purpose of travel.",
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1127,7 +1127,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Description of the visa type; Indicates the purpose of the visa, such as 'Pleasure' or 'Business'.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1136,7 +1136,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Description of the gender category; Provides a human-readable label for gender codes.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1145,7 +1145,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Description of the mode of entry; Indicates how the entry was made, such as 'Land' or 'Unknown'.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1154,7 +1154,7 @@
               "type" : "date",
               "nullable" : true,
               "metadata" : {
-                "description" : "The specific date represented in the format YYYY-MM-DD.",
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1163,7 +1163,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Full descriptive representation of the date, including the day of the week and the full month name.",
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1172,7 +1172,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The month number of the date, ranging from 1 for January to 12 for December.",
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1199,7 +1199,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The year of the date represented as a four-digit integer.",
+                "description" : "The year of the date, represented as a four-digit integer.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1208,7 +1208,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Name of the airport; Represents the official name of the airport facility.",
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1217,7 +1217,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The city where the airport is located; Currently, this column does not contain any data.",
+                "description" : "The city where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1287,7 +1287,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Number of entries recorded for the immigrant in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1296,7 +1296,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The full name of the country associated with the country code.",
+                "description" : "The name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1305,7 +1305,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Code representing the specific subtype of the visa, indicating the purpose of travel.",
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1314,7 +1314,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Description of the visa type; Indicates the purpose of the visa, such as 'Pleasure' or 'Business'.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1323,7 +1323,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Description of the gender category; Provides a human-readable label for gender codes.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1332,7 +1332,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Description of the mode of entry; Indicates how the entry was made, such as 'Land' or 'Unknown'.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1341,7 +1341,7 @@
               "type" : "date",
               "nullable" : true,
               "metadata" : {
-                "description" : "The specific date represented in the format YYYY-MM-DD.",
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1350,7 +1350,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Full descriptive representation of the date, including the day of the week and the full month name.",
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1359,7 +1359,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The month number of the date, ranging from 1 for January to 12 for December.",
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1386,7 +1386,7 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "The year of the date represented as a four-digit integer.",
+                "description" : "The year of the date, represented as a four-digit integer.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1395,7 +1395,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Name of the airport; Represents the official name of the airport facility.",
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1404,7 +1404,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The city where the airport is located; Currently, this column does not contain any data.",
+                "description" : "The city where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
