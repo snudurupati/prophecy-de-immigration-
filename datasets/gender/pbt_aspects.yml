@@ -1,0 +1,19 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: gender_cd
+    type: string
+    nullable: true
+    metadata:
+      description: Gender of the individual; Represented as 'M' for Male and 'F' for
+        Female.
+      mappings: []
+      tags: []
+  - name: gender_desc
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

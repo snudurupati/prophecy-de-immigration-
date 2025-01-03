@@ -50,6 +50,9 @@ pipelines:
       outputs:
       - datasets/I94-Countries
       - datasets/entry-mode
+      - datasets/gender
+      - datasets/immigration-fact
+      - datasets/visa-types
     subgraphs: []
     dependencies: {}
 datasets:
@@ -222,6 +225,45 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-03 17:29:26'
+  datasets/visa-types:
+    name: visa-types
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 17:48:12'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 17:48:12'
+  datasets/gender:
+    name: gender
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 18:10:21'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 18:10:21'
+  datasets/immigration-fact:
+    name: immigration-fact
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 18:11:18'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 18:11:18'
 templates: {}
 jobs: {}
 gemContainer:
