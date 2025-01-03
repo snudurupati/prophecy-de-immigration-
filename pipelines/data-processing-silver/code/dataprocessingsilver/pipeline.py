@@ -27,7 +27,6 @@ def pipeline(spark: SparkSession) -> None:
     df_reformat_visa_types = reformat_visa_types(spark, df_remove_duplicate_visatypes)
     visa_types(spark, df_reformat_visa_types)
     gender(spark, df_gender_description)
-    df_Deduplicate_1 = Deduplicate_1(spark, df_immigration_bronze)
 
 def main():
     spark = SparkSession.builder\

@@ -136,8 +136,180 @@
     "sourcePort" : "bktTzS_839wCjfTT7PgYr$$_ihc3x336z5_7S0jirp9C",
     "target" : "aKF_QovOQcWiILbCXC33U$$yDd4CQxnj1Inct6vsK0qV",
     "targetPort" : "xOrx0e2-fX78YfibmHjkC$$01mtzESYke0H4yZBrE2qX"
+  }, {
+    "id" : "3jXpuA4Lpk2um7eeGdC3s$$W6N7PKcaxPVgXblFAWvKm",
+    "source" : "BIFljeYHYoqB5IATvNSfQ$$UX0rNReB7tR4GFCH0rpBW",
+    "sourcePort" : "Ia6XaZ43SKmqT9eq8FZVl$$Q_NzMGatGW3Z5K1gIZvnh",
+    "target" : "hhlkXEN3QidGTlFXffGFa$$qv-W17eIKqkKsvnUWk1og",
+    "targetPort" : "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj"
+  }, {
+    "id" : "Un-QwTSazXaaVsDvVJGT5",
+    "source" : "hhlkXEN3QidGTlFXffGFa$$qv-W17eIKqkKsvnUWk1og",
+    "sourcePort" : "z-V1hyWXaRz8viYiPw9KS$$om67_LB2QGxvPZbgx6QQ8",
+    "target" : "J-3M46vcbpOy1H0cHDbUd$$xjP0rXhYBBmkX5aBFStzw",
+    "targetPort" : "pExBIGBnsJNrKHumACigs$$5MSL9hPt5vM5yKaGJuYYE"
   } ],
   "processes" : {
+    "J-3M46vcbpOy1H0cHDbUd$$xjP0rXhYBBmkX5aBFStzw" : {
+      "id" : "J-3M46vcbpOy1H0cHDbUd$$xjP0rXhYBBmkX5aBFStzw",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "calendar",
+        "slug" : "calendar",
+        "x" : -1800,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Stores immigration-related calendar data in a structured format for easy access and analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pExBIGBnsJNrKHumACigs$$5MSL9hPt5vM5yKaGJuYYE",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DateId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateShortDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "A concise representation of the date, formatted as 'MMM DD, YYYY'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DayLongName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the day of the week for each date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DayShortName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviated name of the day of the week, represented in three letters.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MonthLongName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the month for the given date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MonthShortName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviated name of the month; Represents the month in a shortened format (e.g., 'Jan' for January).",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarWeek",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The week number of the year in which the date falls, indicating the sequential order of weeks.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDayInWeek",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The position of the day within the week, where 1 represents Sunday and 7 represents Saturday.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date, represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/calendar"
+      }
+    },
     "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv" : {
       "id" : "0eMFiePEHmaAIJFcoUTqx$$utYROwV0y9MR4eTmTKfhv",
       "component" : "Target",
@@ -757,6 +929,275 @@
         "datasetId" : "datasets/immigration-bronze"
       }
     },
+    "hhlkXEN3QidGTlFXffGFa$$qv-W17eIKqkKsvnUWk1og" : {
+      "id" : "hhlkXEN3QidGTlFXffGFa$$qv-W17eIKqkKsvnUWk1og",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformatted_date_columns",
+        "slug" : "reformatted_date_columns",
+        "x" : -2080,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Enhances date-related data for better usability and analysis by reformatting and organizing date attributes.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each date entry in the calendar dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateShortDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "A concise representation of the date, formatted as 'MMM DD, YYYY'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DayLongName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the day of the week for each date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DayShortName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviated name of the day of the week, represented in three letters.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MonthLongName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the month for the given date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MonthShortName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviated name of the month; Represents the month in a shortened format (e.g., 'Jan' for January).",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarWeek",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The week number of the year in which the date falls, indicating the sequential order of weeks.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDayInWeek",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The position of the day within the week, where 1 represents Sunday and 7 represents Saturday.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date, represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "z-V1hyWXaRz8viYiPw9KS$$om67_LB2QGxvPZbgx6QQ8",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "DateId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "replace(date, '-' )"
+          },
+          "description" : ""
+        }, {
+          "target" : "Date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Date"
+          },
+          "description" : ""
+        }, {
+          "target" : "DateLongDescription",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DateLongDescription"
+          },
+          "description" : ""
+        }, {
+          "target" : "DateShortDescription",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DateShortDescription"
+          },
+          "description" : ""
+        }, {
+          "target" : "DayLongName",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DayLongName"
+          },
+          "description" : ""
+        }, {
+          "target" : "DayShortName",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DayShortName"
+          },
+          "description" : ""
+        }, {
+          "target" : "MonthLongName",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "MonthLongName"
+          },
+          "description" : ""
+        }, {
+          "target" : "MonthShortName",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "MonthShortName"
+          },
+          "description" : ""
+        }, {
+          "target" : "CalendarDay",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarDay"
+          },
+          "description" : ""
+        }, {
+          "target" : "CalendarWeek",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarWeek"
+          },
+          "description" : ""
+        }, {
+          "target" : "CalendarDayInWeek",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarDayInWeek"
+          },
+          "description" : ""
+        }, {
+          "target" : "CalendarMonth",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarMonth"
+          },
+          "description" : ""
+        }, {
+          "target" : "CalendarQuarter",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarQuarter"
+          },
+          "description" : ""
+        }, {
+          "target" : "CalendarYear",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarYear"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##DateShortDescription", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##DayShortName", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##DateLongDescription", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##CalendarDay", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##CalendarWeek", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##CalendarDayInWeek", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##CalendarQuarter", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##CalendarMonth", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##MonthLongName", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##CalendarYear", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##MonthShortName", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##Date", "dx8CbH_5qT2unnqnJ3rIA$$Eg9pzp_j2JLuHkoNbpUsj##DayLongName" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "3CNZstx3zmRG78wOoc0cs$$aOoZwzNtgq3x6UMzsltmz" : {
       "id" : "3CNZstx3zmRG78wOoc0cs$$aOoZwzNtgq3x6UMzsltmz",
       "component" : "Reformat",
@@ -1047,6 +1488,33 @@
       },
       "properties" : {
         "datasetId" : "datasets/us-demographics-raw"
+      }
+    },
+    "BIFljeYHYoqB5IATvNSfQ$$UX0rNReB7tR4GFCH0rpBW" : {
+      "id" : "BIFljeYHYoqB5IATvNSfQ$$UX0rNReB7tR4GFCH0rpBW",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "calendar-raw",
+        "slug" : "calendar_raw",
+        "x" : -2340,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Ia6XaZ43SKmqT9eq8FZVl$$Q_NzMGatGW3Z5K1gIZvnh",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/calendar-raw"
       }
     },
     "3Qsmzola3C9HUJXdFUnXT$$a43lkpI7VP3jvomxgTGP6" : {

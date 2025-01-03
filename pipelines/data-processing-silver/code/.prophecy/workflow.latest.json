@@ -166,12 +166,6 @@
     "sourcePort" : "xRJ0pKSPLNeEuPn9rItDU$$gs1wt-_rnp5W4F-hj6sc0",
     "target" : "soaHIdajbBolU_AX17d5I$$8kZaphgj9mLVr_QT8xCJ7",
     "targetPort" : "sDVEiY07mVIbQI3F0dMFa$$lmWX-ab9Zu-XKo-1W2d2d"
-  }, {
-    "id" : "13ICV7VQWw4yKkva3gMLo",
-    "source" : "X-UzAa5BDx4j9aKY3D692$$zy0yuySpJAbw_PR-caZWA",
-    "sourcePort" : "7yNqHDlkm8yX5EOg189Nl$$dMyZI3OGlrdXz8bKbMEYA",
-    "target" : "ZZjGZczEa-CoN4jzBvtkP$$ZefBx44CdGuCgxFjEJ5rj",
-    "targetPort" : "KhGrxCDwUehYgFm-btAGK$$UhWQxW-n_LSnEZM0IDV61"
   } ],
   "processes" : {
     "LO18SQnDE77OZiVhL9x0_$$beM_1kRV94E_hByKM4-4i" : {
@@ -553,8 +547,8 @@
       "metadata" : {
         "label" : "select_columns_reformat",
         "slug" : "select_columns_reformat",
-        "x" : -3180,
-        "y" : -340,
+        "x" : -3200,
+        "y" : -540,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -2062,7 +2056,7 @@
         "label" : "immigration-fact",
         "slug" : "immigration_fact",
         "x" : -2800,
-        "y" : -340,
+        "y" : -540,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -3769,310 +3763,6 @@
       "properties" : {
         "datasetId" : "datasets/gender"
       }
-    },
-    "ZZjGZczEa-CoN4jzBvtkP$$ZefBx44CdGuCgxFjEJ5rj" : {
-      "id" : "ZZjGZczEa-CoN4jzBvtkP$$ZefBx44CdGuCgxFjEJ5rj",
-      "component" : "Deduplicate",
-      "metadata" : {
-        "label" : "Deduplicate_1",
-        "slug" : "Deduplicate_1",
-        "x" : -3180,
-        "y" : -540,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "KhGrxCDwUehYgFm-btAGK$$UhWQxW-n_LSnEZM0IDV61",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "uid",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for each immigration record.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "cicid",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "CIC ID assigned to the individual; serves as a unique reference for tracking immigration cases.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "year",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Year of immigration event; Indicates the year when the immigration record was created.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Month of immigration event; Indicates the month when the immigration record was created.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "city_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Identifier for the city where the immigration event took place.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "i94res",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Code representing the country of residence for the individual entering the country.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "port_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Code representing the port of entry for the immigration event.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "arrival_date_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for the date of arrival, used for tracking immigration events.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "entry_mode_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Identifier for the mode of entry into the country; Indicates how the individual arrived.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "address_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Code representing the address associated with the individual; Typically used for location tracking.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "departure_date_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for the departure date of the individual; Used to track when the individual left the country.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "i94bir",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Indicator of the individual's gender; Uses values to represent Male or Female.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visa_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for the type of visa issued to the individual.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "count",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Number of entries recorded for the individual in the immigration dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "dtad_file_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Identifier for the data file associated with the immigration record.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visa_post_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Code representing the visa processing location.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "occupation",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Occupation of the individual; Indicates the job or profession of the immigrant.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "arrival_flg",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Flag indicating whether the individual has arrived; Typically marked as 'G' for arrival.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "departure_flag",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Indicates whether the individual has departed from the country.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "uodate_flg",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Flag indicating if the individual's information has been updated.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "match_flg",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Indicates whether the immigration record matches with other data sources.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "birth_year",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Year of birth of the individual; Used to determine age.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "departure_date",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Date when the individual departed; The format is YYYYMMDD.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "gender_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Gender of the individual; Represented as 'M' for Male and 'F' for Female.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "INS_number",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier assigned by the Immigration and Naturalization Service (INS) for tracking immigration records.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "airline_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Code representing the airline used for travel, typically a 2-3 letter abbreviation.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "admission_number",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier assigned to each admission record for tracking purposes.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "flight_number",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Flight number associated with the immigration entry, indicating the specific flight taken.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visatype",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual entered the country.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "bkOYliMY43oJx_ckyxKjt$$iraWeDQOYR8ClN_E6WtVE",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "dedupColumns" : [ ],
-        "dedupType" : "any",
-        "columnsSelector" : [ ],
-        "orders" : [ ],
-        "useOrderBy" : false
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Deduplicate",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
     }
   },
   "ports" : {
@@ -4081,22 +3771,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.ZZjGZczEa-CoN4jzBvtkP$$ZefBx44CdGuCgxFjEJ5rj.properties.dedupColumns",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "At least one rule has to be specified",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

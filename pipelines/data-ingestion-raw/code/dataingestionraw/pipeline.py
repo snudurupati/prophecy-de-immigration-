@@ -7,6 +7,9 @@ from prophecy.utils import *
 from dataingestionraw.graph import *
 
 def pipeline(spark: SparkSession) -> None:
+    df_calendar_raw = calendar_raw(spark)
+    df_reformatted_date_columns = reformatted_date_columns(spark, df_calendar_raw)
+    calendar(spark, df_reformatted_date_columns)
     df_us_demographics_raw = us_demographics_raw(spark)
     df_reformatted_population_data = reformatted_population_data(spark, df_us_demographics_raw)
     us_demographics_bronze(spark, df_reformatted_population_data)

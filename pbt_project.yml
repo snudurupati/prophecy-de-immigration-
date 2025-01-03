@@ -23,12 +23,14 @@ pipelines:
     datasets:
       inputs:
       - datasets/airport-codes-raw
+      - datasets/calendar-raw
       - datasets/global-temps-raw
       - datasets/immigration-raw
       - datasets/us-demographics-raw
       - datasets/us-state-abbreviations
       outputs:
       - datasets/airport-codes-bronze
+      - datasets/calendar
       - datasets/global-temps-bronze
       - datasets/immigration-bronze
       - datasets/us-demographics-bronze
@@ -264,6 +266,32 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-03 18:11:18'
+  datasets/calendar-raw:
+    name: calendar-raw
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 21:07:33'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 21:07:33'
+  datasets/calendar:
+    name: calendar
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 21:18:26'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 21:18:26'
 templates: {}
 jobs: {}
 gemContainer:
