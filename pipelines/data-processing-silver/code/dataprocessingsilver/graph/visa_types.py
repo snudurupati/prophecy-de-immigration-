@@ -7,4 +7,4 @@ from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
 def visa_types(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable("`sreeram`.`immigration_schema`.`visa_types`")
+    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`visa_types`")

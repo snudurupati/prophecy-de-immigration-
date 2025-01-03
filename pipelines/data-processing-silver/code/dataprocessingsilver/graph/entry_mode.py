@@ -7,4 +7,4 @@ from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
 def entry_mode(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable("`sreeram`.`immigration_schema`.`mode_of_entry`")
+    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`mode_of_entry`")

@@ -6,7 +6,7 @@ schema:
     type: integer
     nullable: true
     metadata:
-      description: ''
+      description: Unique identifier for the type of visa issued to the individual.
       mappings: []
       tags: []
   - name: visa_subtype_cd
@@ -14,7 +14,7 @@ schema:
     nullable: true
     metadata:
       description: Type of visa issued to the individual; Indicates the category of
-        visa under which the individual is allowed entry.
+        visa under which the individual entered the country.
       mappings: []
       tags: []
   - name: visa_type_desc

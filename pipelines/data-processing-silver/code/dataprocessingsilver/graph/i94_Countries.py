@@ -7,4 +7,4 @@ from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
 def i94_Countries(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable("`sreeram`.`immigration_schema`.`i94_countries`")
+    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`i94_countries`")

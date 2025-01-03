@@ -7,4 +7,4 @@ from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
 def immigration_fact(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable("`sreeram`.`immigration_schema`.`immigration_fact`")
+    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`immigration_fact`")

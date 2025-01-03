@@ -13,10 +13,14 @@ def select_columns_reformat(spark: SparkSession, in0: DataFrame) -> DataFrame:
         col("city_id"), 
         col("i94res"), 
         col("port_cd"), 
-        col("arrival_date_id"), 
+        expr("replace(CAST(timestampadd(DAY, arrival_date_id, CAST('1960-1-1' AS DATE)) AS DATE), '-')")\
+          .cast(IntegerType())\
+          .alias("arrival_date_id"), 
         col("entry_mode_id"), 
         col("address_cd"), 
-        col("departure_date_id"), 
+        expr("replace(CAST(timestampadd(DAY, departure_date_id, CAST('1960-1-1' AS DATE)) AS DATE), '-')")\
+          .cast(IntegerType())\
+          .alias("departure_date_id"), 
         col("i94bir"), 
         col("visa_id"), 
         col("count"), 

@@ -6,7 +6,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Gender of the individual; Values include 'M' for Male and 'F' for
+      description: Gender of the individual; Represented as 'M' for Male and 'F' for
         Female.
       mappings: []
       tags: []
