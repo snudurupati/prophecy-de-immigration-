@@ -1,0 +1,1633 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.6.0",
+        "pyPiVersion" : "1.9.28"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/data-analysis-gold",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "data-analysis-gold",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true
+    },
+    "language" : "python",
+    "fabricId" : "20471",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sreeramprophecyioteam.immigrationdw.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "dataanalysisgold",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "V0wFiKDRhbin52A815I-b",
+    "source" : "Fxer7uzGZyJsQD7Jh5TGl$$kALu0Q2jPt7lc6ppO-z60",
+    "sourcePort" : "F5TpNLGqDdSwCJHhDsSv6$$gBwGKiMaAG0U7wE1xu4r5",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f"
+  }, {
+    "id" : "FaDAL5uLiLt3_CWAlIRCq",
+    "source" : "w-Nf7s9kWp49ZB9Pqc-rX$$poo1h_ZmjT6CZBmlxPLV7",
+    "sourcePort" : "lqZjGqz74PvIX_o0SsW3P$$JlfMXUKnXvXEjE4pXSqjW",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp"
+  }, {
+    "id" : "isIe-49_PHZNizPP_j3af",
+    "source" : "BOf9XNqWVDqEWAtIi0bbk$$fHsSv_vKckqBANWJWxJnu",
+    "sourcePort" : "xNE25tzxlrcZRP_bsF8Qu$$R7QUD1nUaKUTBKtgbkMO3",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H"
+  }, {
+    "id" : "HGFAgsFVMlBJ362uIcP7N",
+    "source" : "vMoK4Pm8nyi494lo3JURB$$P1VYyU19BFHt1SjyTMFN0",
+    "sourcePort" : "OwqKNq2-Qa_WU79SwSiSs$$pQztL1pp2OfA8c1o7UJfw",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG"
+  }, {
+    "id" : "SmP-BNUcsNNBKPwX45E9P",
+    "source" : "4d0e227mtbXG44_Fzbgxs$$ZSqeUIYLgixQocHhluDEM",
+    "sourcePort" : "OPBaqeCIMZw6KjGiN2Nfh$$iIeYER3OS-Kj3SObSGa10",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI"
+  }, {
+    "id" : "jkuLn54h4ZQB7v6p7tiQj",
+    "source" : "wYLSox-YCMmbjuuw9X-7d$$_c9EnPTI-w2GGkJEl_uKL",
+    "sourcePort" : "IjXY6gdzfco1DGIOZCcst$$zjV6PcAy_Z6Fq9gkweSYv",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3"
+  }, {
+    "id" : "iYg6GvIv7PshD4_YN1gYR",
+    "source" : "IjSZHa0llqghob-x3Mfa4$$N9e6r_b0QxyvJ1yAVT5f3",
+    "sourcePort" : "T6gyz9FKjTo3NQ4f24D2Q$$7S1BzkCV2QV-dv9D1BNn_",
+    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "targetPort" : "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG"
+  }, {
+    "id" : "NsL3SeO1GdmglmYdLeEKg$$PTMeybNGiSuRgo-dMOIuv",
+    "source" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+    "sourcePort" : "xZdyw-A-reE1TvDzV-VwE$$jvQzXPg4yL_ybFM99Izqr",
+    "target" : "itAZN_-m0DGvJpdhZtiNu$$1aYLVDUuQwLAw7w6vN8D-",
+    "targetPort" : "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK"
+  }, {
+    "id" : "TuiaPr0hMGt1dpcdBJjIm$$c0bSoYF3ScyS5oV73V7bV",
+    "source" : "itAZN_-m0DGvJpdhZtiNu$$1aYLVDUuQwLAw7w6vN8D-",
+    "sourcePort" : "Sitc6Vg6OY2W_2-vr2yrc$$-Xmuilj8VAs8msZnysHd3",
+    "target" : "DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS",
+    "targetPort" : "TQkD8oOFKt90y-LhXsOqn$$C_Q701kRbEnTrPFjvqo9D"
+  } ],
+  "processes" : {
+    "BOf9XNqWVDqEWAtIi0bbk$$fHsSv_vKckqBANWJWxJnu" : {
+      "id" : "BOf9XNqWVDqEWAtIi0bbk$$fHsSv_vKckqBANWJWxJnu",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "visa-types",
+        "slug" : "visa_types",
+        "x" : -860,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves data on different types of visas for analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xNE25tzxlrcZRP_bsF8Qu$$R7QUD1nUaKUTBKtgbkMO3",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/visa-types"
+      }
+    },
+    "wYLSox-YCMmbjuuw9X-7d$$_c9EnPTI-w2GGkJEl_uKL" : {
+      "id" : "wYLSox-YCMmbjuuw9X-7d$$_c9EnPTI-w2GGkJEl_uKL",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "calendar",
+        "slug" : "calendar",
+        "x" : -460,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves calendar data for analysis, which can support various time-based insights and reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "IjXY6gdzfco1DGIOZCcst$$zjV6PcAy_Z6Fq9gkweSYv",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/calendar"
+      }
+    },
+    "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf" : {
+      "id" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "multi_join",
+        "slug" : "multi_join",
+        "x" : -260,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Combines multiple datasets to create a comprehensive view of travel-related data, enhancing insights into customer demographics and travel patterns.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "cicid",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each immigration record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "year",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year of the immigration event.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the city where the immigrant is arriving.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94res",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the country of residence of the immigrant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "port_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the port of entry for the immigration event.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrival_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the date of arrival; Represents the date when the individual entered the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entry_mode_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the mode of entry into the country; Indicates how the individual arrived.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "address_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the address of the individual; Used for tracking residency or destination.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the date of departure; Represents the date when the individual left the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94bir",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Birth year of the individual; Indicates the year of birth for demographic analysis.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the type of visa issued to the immigrant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of entries recorded for the immigrant in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dtad_file_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the file containing immigration data; Used for tracking and referencing the source of the data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_post_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the visa processing location; Indicates where the visa was issued.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrival_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the individual has arrived in the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_flag",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the individual has departed from the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "uodate_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag indicating whether the record has been updated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "match_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag indicating whether the immigration record matches with other data sources.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "birth_year",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year of birth of the individual; Indicates the age of the immigrant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the individual departed; Format is YYYYMMDD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Gender of the individual; Indicates whether the individual is Male (M) or Female (F).",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "INS_number",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identification number assigned by the Immigration and Naturalization Service (INS) to track the individual's immigration record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "airline_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the airline used for the immigration entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "admission_number",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to each admission record for tracking purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "flight_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the flight associated with the immigration record; Represents the flight number used during entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique two-letter code representing each country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The full name of the country associated with the country code.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H",
+          "slug" : "in2",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "visa_type_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each type of visa, categorizing them into different classifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_subtype_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the specific subtype of the visa, indicating the purpose of travel.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_type_desc",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "Description of the visa type; Indicates the purpose of the visa, such as 'Pleasure' or 'Business'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG",
+          "slug" : "in3",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "IATA",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The International Air Transport Association (IATA) code representing the airport; Typically a three-letter code used for airline operations.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ICAO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The International Civil Aviation Organization code for the airport; A unique four-letter alphanumeric code assigned to each airport.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Airport_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the airport; Represents the official name of the airport facility.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the airport is located; Currently, this column does not contain any data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Information",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Additional details or notes about the airport; Currently not populated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG",
+          "slug" : "in4",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "gender_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the gender; Includes values such as 'F' for Female and 'X' for Unknown.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_desc",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "Description of the gender category; Provides a human-readable label for gender codes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI",
+          "slug" : "in5",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "entry_mode_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each entry mode used in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entry_mode_desc",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "Description of the mode of entry; Indicates how the entry was made, such as 'Land' or 'Unknown'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3",
+          "slug" : "in6",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DateId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each date, formatted as YYYYMMDD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the format YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week and the full month name.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateShortDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "A concise representation of the date, formatted as 'MMM D, YYYY' for quick reference.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DayLongName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the day of the week for the given date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DayShortName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviated name of the day of the week, represented in a three-letter format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MonthLongName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the month corresponding to the date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MonthShortName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Abbreviated name of the month; Represents the month in a short format, such as 'Jan' for January.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarWeek",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The week number of the year in which the date falls, used for weekly reporting and analysis.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDayInWeek",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The position of the day within the week, where 1 represents Sunday and 7 represents Saturday.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the date, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "xZdyw-A-reE1TvDzV-VwE$$jvQzXPg4yL_ybFM99Izqr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.address_cd = in1.Country_code"
+          },
+          "joinType" : "left_outer"
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.visa_id = in2.visa_type_id"
+          },
+          "joinType" : "left_outer"
+        }, {
+          "alias" : "in3",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.port_cd = in3.IATA"
+          },
+          "joinType" : "left_outer"
+        }, {
+          "alias" : "in4",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.gender_cd = in4.gender_cd"
+          },
+          "joinType" : "left_outer"
+        }, {
+          "alias" : "in5",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.entry_mode_id = in5.entry_mode_id"
+          },
+          "joinType" : "left_outer"
+        }, {
+          "alias" : "in6",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.dtad_file_id = in6.DateId"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "arrival_date_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "to_date(in0.arrival_date_id, 'yyyyMMdd')"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "departure_date_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "to_date(in0.departure_date_id, 'yyyyMMdd')"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "count",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.count"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Country_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.Country_Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "visa_subtype_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.visa_subtype_cd"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "visa_type_desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.visa_type_desc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "gender_desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in4.gender_desc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "entry_mode_desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in5.entry_mode_desc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in6.Date"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "DateLongDescription",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in6.DateLongDescription"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarMonth",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in6.CalendarMonth"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarDay",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in6.CalendarDay"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarQuarter",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in6.CalendarQuarter"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarYear",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in6.CalendarYear"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Airport_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in3.Airport_Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in3.City"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H",
+          "alias" : "in2",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG",
+          "alias" : "in3",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG",
+          "alias" : "in4",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI",
+          "alias" : "in5",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3",
+          "alias" : "in6",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_id", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##dtad_file_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##visa_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##gender_cd", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_cd", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##entry_mode_id", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateId", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##port_cd", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_code", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##address_cd", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##IATA", "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_desc", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateLongDescription", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_desc", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##Airport_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarQuarter", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarDay", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##departure_date_id", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_desc", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##count", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarYear", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarMonth", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_subtype_cd", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##Date", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##City", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##arrival_date_id" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "w-Nf7s9kWp49ZB9Pqc-rX$$poo1h_ZmjT6CZBmlxPLV7" : {
+      "id" : "w-Nf7s9kWp49ZB9Pqc-rX$$poo1h_ZmjT6CZBmlxPLV7",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "I94-Countries",
+        "slug" : "I94_Countries",
+        "x" : -720,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves a list of countries related to immigration data for analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lqZjGqz74PvIX_o0SsW3P$$JlfMXUKnXvXEjE4pXSqjW",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/I94-Countries"
+      }
+    },
+    "vMoK4Pm8nyi494lo3JURB$$P1VYyU19BFHt1SjyTMFN0" : {
+      "id" : "vMoK4Pm8nyi494lo3JURB$$P1VYyU19BFHt1SjyTMFN0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "gender",
+        "slug" : "gender",
+        "x" : -780,
+        "y" : 80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves gender data from the immigration database for analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OwqKNq2-Qa_WU79SwSiSs$$pQztL1pp2OfA8c1o7UJfw",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/gender"
+      }
+    },
+    "IjSZHa0llqghob-x3Mfa4$$N9e6r_b0QxyvJ1yAVT5f3" : {
+      "id" : "IjSZHa0llqghob-x3Mfa4$$N9e6r_b0QxyvJ1yAVT5f3",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "airport-codes-bronze",
+        "slug" : "airport_codes_bronze",
+        "x" : -840,
+        "y" : -60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves a dataset containing U.S. state codes for immigration records.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "T6gyz9FKjTo3NQ4f24D2Q$$7S1BzkCV2QV-dv9D1BNn_",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/airport-codes-bronze"
+      }
+    },
+    "DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS" : {
+      "id" : "DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "total_visits_gold",
+        "slug" : "total_visits_gold",
+        "x" : 240,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Stores total visit data in a structured format for future analysis and reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TQkD8oOFKt90y-LhXsOqn$$C_Q701kRbEnTrPFjvqo9D",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "arrival_date_id",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date_id",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The full name of the country associated with the country code.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_subtype_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the specific subtype of the visa, indicating the purpose of travel.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_type_desc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the visa type; Indicates the purpose of the visa, such as 'Pleasure' or 'Business'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_desc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the gender category; Provides a human-readable label for gender codes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entry_mode_desc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the mode of entry; Indicates how the entry was made, such as 'Land' or 'Unknown'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the format YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week and the full month name.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the date, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Airport_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the airport; Represents the official name of the airport facility.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the airport is located; Currently, this column does not contain any data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "total_visits",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/total_visits_gold"
+      }
+    },
+    "itAZN_-m0DGvJpdhZtiNu$$1aYLVDUuQwLAw7w6vN8D-" : {
+      "id" : "itAZN_-m0DGvJpdhZtiNu$$1aYLVDUuQwLAw7w6vN8D-",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "total_visits_by_date_and_location",
+        "slug" : "total_visits_by_date_and_location",
+        "x" : 20,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Aggregates total visits by various dimensions, including date and location, to provide insights into travel patterns.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK",
+          "slug" : "multi_join",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "arrival_date_id",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date_id",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of entries recorded for the immigrant in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The full name of the country associated with the country code.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_subtype_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Code representing the specific subtype of the visa, indicating the purpose of travel.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_type_desc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the visa type; Indicates the purpose of the visa, such as 'Pleasure' or 'Business'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_desc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the gender category; Provides a human-readable label for gender codes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entry_mode_desc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the mode of entry; Indicates how the entry was made, such as 'Land' or 'Unknown'.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the format YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week and the full month name.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the date, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Airport_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the airport; Represents the official name of the airport facility.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the airport is located; Currently, this column does not contain any data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Sitc6Vg6OY2W_2-vr2yrc$$-Xmuilj8VAs8msZnysHd3",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "total_visits",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(count)"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "groupBy",
+        "columnsSelector" : [ "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##visa_type_desc", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##arrival_date_id", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##DateLongDescription", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarQuarter", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Country_Name", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarMonth", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarYear", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Date", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##entry_mode_desc", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##visa_subtype_cd", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##departure_date_id", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarDay", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##count", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##City", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Airport_Name", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##gender_desc" ],
+        "groupBy" : [ {
+          "target" : "arrival_date_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "arrival_date_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "departure_date_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "departure_date_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Country_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Country_Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "visa_subtype_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "visa_subtype_cd"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "visa_type_desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "visa_type_desc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "gender_desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "gender_desc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "entry_mode_desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "entry_mode_desc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Date"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "DateLongDescription",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DateLongDescription"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarMonth",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarMonth"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarDay",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarDay"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarQuarter",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarQuarter"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CalendarYear",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CalendarYear"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Airport_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Airport_Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "City"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Fxer7uzGZyJsQD7Jh5TGl$$kALu0Q2jPt7lc6ppO-z60" : {
+      "id" : "Fxer7uzGZyJsQD7Jh5TGl$$kALu0Q2jPt7lc6ppO-z60",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "immigration-fact",
+        "slug" : "immigration_fact",
+        "x" : -600,
+        "y" : -480,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves immigration data for analysis, providing insights into migration patterns and trends.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "F5TpNLGqDdSwCJHhDsSv6$$gBwGKiMaAG0U7wE1xu4r5",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/immigration-fact"
+      }
+    },
+    "4d0e227mtbXG44_Fzbgxs$$ZSqeUIYLgixQocHhluDEM" : {
+      "id" : "4d0e227mtbXG44_Fzbgxs$$ZSqeUIYLgixQocHhluDEM",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "entry-mode",
+        "slug" : "entry_mode",
+        "x" : -720,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves data on modes of entry for immigration, providing insights into entry patterns.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OPBaqeCIMZw6KjGiN2Nfh$$iIeYER3OS-Kj3SObSGa10",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/entry-mode"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

@@ -57,6 +57,27 @@ pipelines:
       - datasets/visa-types
     subgraphs: []
     dependencies: {}
+  pipelines/data-analysis-gold:
+    name: data-analysis-gold
+    description: ''
+    author: sreeram@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-01-03 21:49:15'
+    datasets:
+      inputs:
+      - datasets/I94-Countries
+      - datasets/airport-codes-bronze
+      - datasets/calendar
+      - datasets/entry-mode
+      - datasets/gender
+      - datasets/immigration-fact
+      - datasets/visa-types
+      outputs:
+      - datasets/total_visits_gold
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/immigration-raw:
     name: immigration-raw
@@ -292,6 +313,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-03 21:18:26'
+  datasets/total_visits_gold:
+    name: total_visits_gold
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 22:41:00'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 22:41:00'
 templates: {}
 jobs: {}
 gemContainer:

@@ -6,13 +6,14 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: The two-letter postal abbreviation representing each U.S. state.
+      description: Two-letter abbreviation representing the state within the United
+        States.
       mappings: []
       tags: []
   - name: Country_Name
     type: string
     nullable: true
     metadata:
-      description: Full name of the U.S. state.
+      description: The name of the U.S. state.
       mappings: []
       tags: []
