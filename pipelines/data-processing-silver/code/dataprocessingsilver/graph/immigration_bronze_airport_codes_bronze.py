@@ -15,7 +15,7 @@ def immigration_bronze_airport_codes_bronze(
         .alias("immigration_bronze")\
         .join(
           airport_codes_bronze.alias("airport_codes_bronze"),
-          (col("immigration_bronze.address_cd") == col("airport_codes_bronze.Country_code")),
+          (col("airport_codes_bronze.address_cd") == col("immigration_bronze.Country_code")),
           "inner"
         )\
-        .select(col("airport_codes_bronze.Country_code").alias("Country_code"), col("airport_codes_bronze.Country_Name").alias("Country_Name"))
+        .select(col("immigration_bronze.Country_code").alias("Country_code"), col("immigration_bronze.Country_Name").alias("Country_Name"))

@@ -49,6 +49,7 @@ pipelines:
       - datasets/us-state-codes-bronze
       outputs:
       - datasets/I94-Countries
+      - datasets/entry-mode
     subgraphs: []
     dependencies: {}
 datasets:
@@ -208,6 +209,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-02 22:39:54'
+  datasets/entry-mode:
+    name: entry-mode
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-03 17:29:26'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-03 17:29:26'
 templates: {}
 jobs: {}
 gemContainer:

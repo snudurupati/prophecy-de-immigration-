@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: entry_mode_id
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: entry_mode_desc
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
