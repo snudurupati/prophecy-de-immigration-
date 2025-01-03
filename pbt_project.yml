@@ -1,7 +1,7 @@
 name: immigration-dw
 description: US immigration, Airport, Port of Entry City and City Weather data primarily
   focusing on the type of visas being issued and the associated profiles.
-version: '1.2'
+version: '2.0'
 author: sreeram@prophecy.io
 language: python
 buildSystem: ''
