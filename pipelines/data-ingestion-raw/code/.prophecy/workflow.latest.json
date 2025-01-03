@@ -1959,7 +1959,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Stores U.S. state codes in a structured format for easy access and analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {

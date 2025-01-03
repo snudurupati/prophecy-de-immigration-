@@ -9,5 +9,5 @@ from dataingestionraw.functions import *
 def us_state_codes_bronze(spark: SparkSession, country_name_code: DataFrame):
     country_name_code.write\
         .format("delta")\
-        .mode("error")\
+        .mode("overwrite")\
         .saveAsTable("`sreeram`.`immigration_schema`.`us_state_codes_bronze`")
