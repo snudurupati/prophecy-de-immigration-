@@ -38,7 +38,7 @@ pipelines:
     subgraphs: []
     dependencies: {}
   pipelines/data-processing-silver:
-    name: data-processing-silver
+    name: data-processing-dims-silver
     description: ''
     author: sreeram@prophecy.io
     mode: batch
@@ -92,6 +92,19 @@ pipelines:
       - datasets/Port-of-Entry
       outputs:
       - datasets/Port-of-Entry
+    subgraphs: []
+    dependencies: {}
+  pipelines/data-processing-fact-silver:
+    name: data-processing-fact-silver
+    description: ''
+    author: sreeram@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-01-09 17:30:27'
+    datasets:
+      inputs: []
+      outputs: []
     subgraphs: []
     dependencies: {}
 datasets:
