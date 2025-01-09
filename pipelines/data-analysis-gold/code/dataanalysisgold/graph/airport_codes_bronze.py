@@ -7,4 +7,4 @@ from dataanalysisgold.config.ConfigStore import *
 from dataanalysisgold.functions import *
 
 def airport_codes_bronze(spark: SparkSession) -> DataFrame:
-    return spark.read.table("`sreeram`.`immigration_schema`.`us_state_codes_bronze`")
+    return spark.read.table("`sreeram`.`immigration_schema`.`airport_codes_bronze`")

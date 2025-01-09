@@ -11,4 +11,4 @@ def airport_codes_bronze(spark: SparkSession, in0: DataFrame):
         .format("delta")\
         .option("mergeSchema", True)\
         .mode("overwrite")\
-        .saveAsTable("`sreeram`.`immigration_schema`.`us_state_codes_bronze`")
+        .saveAsTable("`sreeram`.`immigration_schema`.`airport_codes_bronze`")

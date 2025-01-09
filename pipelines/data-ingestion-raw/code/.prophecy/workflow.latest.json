@@ -1529,7 +1529,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Stores airport codes in a structured format for easy access and analysis, enabling efficient data management for immigration-related insights.",
+        "comment" : "Stores airport codes data in a structured format, enabling efficient access and management for immigration-related analyses.",
         "autoUpdateComment" : true
       },
       "ports" : {
