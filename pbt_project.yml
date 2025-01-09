@@ -103,8 +103,14 @@ pipelines:
     language: python
     createdAt: '2025-01-09 17:30:27'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/I94-Countries
+      - datasets/US-Cities
+      - datasets/gender
+      - datasets/immigration-bronze
+      - datasets/visa-types
+      outputs:
+      - datasets/immigration-fact
     subgraphs: []
     dependencies: {}
 datasets:

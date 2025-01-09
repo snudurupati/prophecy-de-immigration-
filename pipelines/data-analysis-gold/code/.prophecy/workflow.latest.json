@@ -212,7 +212,7 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "cicid",
+              "name" : "year",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -221,7 +221,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "year",
+              "name" : "month",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -248,16 +248,25 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "port_cd",
-              "type" : "string",
+              "name" : "arrival_date_id",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "arrival_date_id",
+              "name" : "departure_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "filed_date_id",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -275,24 +284,6 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "address_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "State of residence in the U.S. where the individual is staying; Represents the location of the individual's address.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "departure_date_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "i94bir",
               "type" : "integer",
               "nullable" : true,
@@ -302,25 +293,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "visa_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "count",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "dtad_file_id",
+              "name" : "visit_count",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -334,6 +307,15 @@
               "nullable" : true,
               "metadata" : {
                 "description" : "The location where the visa was issued; Typically represented as a state or country code.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "occupation",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Occupation of the individual; Indicates the job or profession of the immigrant.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -392,15 +374,6 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "gender_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "INS_number",
               "type" : "integer",
               "nullable" : true,
@@ -433,6 +406,42 @@
               "nullable" : true,
               "metadata" : {
                 "description" : "Flight number associated with the immigration entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "port_id_SK",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country_Id_SK",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_cd_sk",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_id_SK",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1110,156 +1119,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "TQkD8oOFKt90y-LhXsOqn$$C_Q701kRbEnTrPFjvqo9D",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "arrival_date_id",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "departure_date_id",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Country_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Full name of the U.S. state.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visa_subtype_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visa_type_desc",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "gender_desc",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "entry_mode_desc",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Date",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "DateLongDescription",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarMonth",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarDay",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarQuarter",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarYear",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The year of the date, represented as a four-digit integer.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Airport_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The official name of the airport, which serves as a key identifier for the location.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "City",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The city where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "total_visits",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -1288,156 +1148,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK",
-          "slug" : "multi_join",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "arrival_date_id",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "departure_date_id",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "count",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Country_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Full name of the U.S. state.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visa_subtype_cd",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "visa_type_desc",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "gender_desc",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "entry_mode_desc",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Date",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "DateLongDescription",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarMonth",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarDay",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarQuarter",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "CalendarYear",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The year of the date, represented as a four-digit integer.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Airport_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The official name of the airport, which serves as a key identifier for the location.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "City",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The city where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "multi_join"
         } ],
         "outputs" : [ {
           "id" : "Sitc6Vg6OY2W_2-vr2yrc$$-Xmuilj8VAs8msZnysHd3",
@@ -1656,5 +1367,138 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.address_cd [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.visa_id [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.port_cd [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.gender_cd [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.dtad_file_id [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.count [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticFix" : {
+      "fixType" : "CopilotDiagnosticFix",
+      "copilotFixType" : "expression"
+    }
+  }, {
+    "property" : "$.workflow.processes.itAZN_-m0DGvJpdhZtiNu$$1aYLVDUuQwLAw7w6vN8D-",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

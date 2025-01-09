@@ -2,14 +2,14 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: cicid
+  - name: year
     type: integer
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: year
+  - name: month
     type: integer
     nullable: true
     metadata:
@@ -30,15 +30,21 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: port_cd
-    type: string
+  - name: arrival_date_id
+    type: integer
     nullable: true
     metadata:
-      description: Port of entry into the United States; Represents the code for the
-        location where the individual arrived.
+      description: ''
       mappings: []
       tags: []
-  - name: arrival_date_id
+  - name: departure_date_id
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: filed_date_id
     type: integer
     nullable: true
     metadata:
@@ -52,21 +58,6 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: address_cd
-    type: string
-    nullable: true
-    metadata:
-      description: State of residence in the U.S. where the individual is staying;
-        Represents the location of the individual's address.
-      mappings: []
-      tags: []
-  - name: departure_date_id
-    type: integer
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
   - name: i94bir
     type: integer
     nullable: true
@@ -74,21 +65,7 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: visa_id
-    type: integer
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: count
-    type: integer
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: dtad_file_id
+  - name: visit_count
     type: integer
     nullable: true
     metadata:
@@ -101,6 +78,14 @@ schema:
     metadata:
       description: The location where the visa was issued; Typically represented as
         a state or country code.
+      mappings: []
+      tags: []
+  - name: occupation
+    type: string
+    nullable: true
+    metadata:
+      description: Occupation of the individual; Indicates the job or profession of
+        the immigrant.
       mappings: []
       tags: []
   - name: arrival_flg
@@ -149,14 +134,6 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: gender_cd
-    type: string
-    nullable: true
-    metadata:
-      description: Gender of the individual; Values include 'M' for Male and 'F' for
-        Female.
-      mappings: []
-      tags: []
   - name: INS_number
     type: integer
     nullable: true
@@ -183,5 +160,33 @@ schema:
     nullable: true
     metadata:
       description: Flight number associated with the immigration entry.
+      mappings: []
+      tags: []
+  - name: port_id_SK
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Country_Id_SK
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: gender_cd_sk
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: visa_id_SK
+    type: long
+    nullable: false
+    metadata:
+      description: ''
       mappings: []
       tags: []

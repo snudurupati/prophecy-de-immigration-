@@ -4,9 +4,24 @@ from pyspark.sql.types import *
 from dataprocessingfactsilver.config.ConfigStore import *
 from dataprocessingfactsilver.functions import *
 from prophecy.utils import *
+from dataprocessingfactsilver.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_visa_types = visa_types(spark)
+    df_immigration_bronze = immigration_bronze(spark)
+    df_US_Cities = US_Cities(spark)
+    df_gender = gender(spark)
+    df_I94_Countries = I94_Countries(spark)
+    df_left_join_port_data = left_join_port_data(
+        spark, 
+        df_immigration_bronze, 
+        df_US_Cities, 
+        df_gender, 
+        df_visa_types, 
+        df_I94_Countries
+    )
+    df_select_immigration_columns = select_immigration_columns(spark, df_left_join_port_data)
+    immigration_fact(spark, df_select_immigration_columns)
 
 def main():
     spark = SparkSession.builder\
