@@ -47,10 +47,12 @@ pipelines:
     createdAt: '2025-01-02 17:24:55'
     datasets:
       inputs:
+      - datasets/airport-codes-bronze
       - datasets/immigration-bronze
       - datasets/us-state-codes-bronze
       outputs:
       - datasets/I94-Countries
+      - datasets/US-Cities
       - datasets/entry-mode
       - datasets/gender
       - datasets/visa-types
@@ -340,6 +342,19 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-03 22:41:00'
+  datasets/US-Cities:
+    name: US-Cities
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-09 16:12:31'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-09 16:12:31'
 templates: {}
 jobs: {}
 gemContainer:

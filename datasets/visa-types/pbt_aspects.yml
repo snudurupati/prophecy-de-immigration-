@@ -2,6 +2,13 @@ version: 1
 schema:
   type: struct
   fields:
+  - name: visa_id_SK
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: visa_type_id
     type: integer
     nullable: true

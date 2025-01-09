@@ -1,0 +1,41 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: port_id_SK
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: port_cd
+    type: string
+    nullable: true
+    metadata:
+      description: Port of entry into the United States; Represents the code for the
+        location where the individual arrived.
+      mappings: []
+      tags: []
+  - name: Airport_Name
+    type: string
+    nullable: true
+    metadata:
+      description: The official name of the airport, which serves as a key identifier
+        for the location.
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: The city where the airport is located.
+      mappings: []
+      tags: []
+  - name: Country
+    type: string
+    nullable: true
+    metadata:
+      description: The country where the airport is located.
+      mappings: []
+      tags: []

@@ -9,6 +9,10 @@ from dataprocessingsilver.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_immigration_bronze = immigration_bronze(spark)
     df_drop_duplicates_by_gender = drop_duplicates_by_gender(spark, df_immigration_bronze)
+    df_remove_duplicate_ports = remove_duplicate_ports(spark, df_immigration_bronze)
+    df_airport_codes_bronze = airport_codes_bronze(spark)
+    df_join_ports_with_airports = join_ports_with_airports(spark, df_remove_duplicate_ports, df_airport_codes_bronze)
+    US_Cities(spark, df_join_ports_with_airports)
     df_us_state_codes_bronze = us_state_codes_bronze(spark)
     df_immigration_bronze_airport_codes_bronze = immigration_bronze_airport_codes_bronze(
         spark, 
@@ -26,7 +30,6 @@ def pipeline(spark: SparkSession) -> None:
     df_reformat_visa_types = reformat_visa_types(spark, df_remove_duplicate_visatypes)
     visa_types(spark, df_reformat_visa_types)
     gender(spark, df_gender_description)
-    df_remove_duplicate_ports = remove_duplicate_ports(spark, df_immigration_bronze)
 
 def main():
     spark = SparkSession.builder\

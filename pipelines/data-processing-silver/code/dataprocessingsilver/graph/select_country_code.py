@@ -8,7 +8,7 @@ from dataprocessingsilver.functions import *
 
 def select_country_code(spark: SparkSession, remove_duplicate_countries: DataFrame) -> DataFrame:
     return remove_duplicate_countries.select(
-        monotonically_increasing_id().alias("Country_Id"), 
+        (monotonically_increasing_id() + lit(1)).alias("Country_Id_SK"), 
         col("Country_code"), 
         col("Country_Name")
     )

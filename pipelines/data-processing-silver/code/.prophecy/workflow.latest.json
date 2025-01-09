@@ -166,6 +166,24 @@
     "sourcePort" : "7yNqHDlkm8yX5EOg189Nl$$dMyZI3OGlrdXz8bKbMEYA",
     "target" : "hcpjhXc1UUG9wsjjQ-gQ5$$b7DV28r3ZAZpjkSpEFvSy",
     "targetPort" : "m-WBkLOnURnNv_f_mH6_y$$YYwP9N4iyGvTcm_s3s09S"
+  }, {
+    "id" : "ZdRiEX0TXplm8RCPIVxKJ$$xHGXpgp78Ved0J2rPE9WI",
+    "source" : "hcpjhXc1UUG9wsjjQ-gQ5$$b7DV28r3ZAZpjkSpEFvSy",
+    "sourcePort" : "YCh4LW_agv_uUc2psNiuZ$$BXwUbGOmhdPMKYkHHm_40",
+    "target" : "B3lUTyJjd3fCGm2HUIFCu$$VqDpD_f9T3JjEAWu5AkWu",
+    "targetPort" : "8Q1C6dilynmJ68jOV8a2M$$cYT1RgF42JIKubTQSymzk"
+  }, {
+    "id" : "2E3-c_RffNtx--XkN0VU3",
+    "source" : "qoGLt57oAnHW3aJuTo6IC$$c7en2oqCUTVceDFSOOd67",
+    "sourcePort" : "wt5C7MTCWwB9G3r2uueAa$$I278nKaqAhYbqGDxDymM5",
+    "target" : "B3lUTyJjd3fCGm2HUIFCu$$VqDpD_f9T3JjEAWu5AkWu",
+    "targetPort" : "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY"
+  }, {
+    "id" : "d1X2WXJWKfzzenYvY5bWM$$4hOdf2AqidWFL8mSmGQL4",
+    "source" : "B3lUTyJjd3fCGm2HUIFCu$$VqDpD_f9T3JjEAWu5AkWu",
+    "sourcePort" : "6SGfFp-VG6kNTnz3W7c8c$$ZdqpPsjC1_TSDZO4zif4s",
+    "target" : "6wA_CJrnQABpvGpIlR2QZ$$vseQaqUqq8XcYAwn1bpeS",
+    "targetPort" : "c1lljplGv5MAwY6eJoDy0$$EvXKXzRm3ldR_rBrDbdXa"
   } ],
   "processes" : {
     "LO18SQnDE77OZiVhL9x0_$$beM_1kRV94E_hByKM4-4i" : {
@@ -476,6 +494,83 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
+    "6wA_CJrnQABpvGpIlR2QZ$$vseQaqUqq8XcYAwn1bpeS" : {
+      "id" : "6wA_CJrnQABpvGpIlR2QZ$$vseQaqUqq8XcYAwn1bpeS",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "US-Cities",
+        "slug" : "US_Cities",
+        "x" : -2820,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "c1lljplGv5MAwY6eJoDy0$$EvXKXzRm3ldR_rBrDbdXa",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "port_id_SK",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "port_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Airport_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/US-Cities"
+      }
+    },
     "4GIDx4hKTUo1is7FEu_dp$$dGtdydABfcEGgtpe9-biK" : {
       "id" : "4GIDx4hKTUo1is7FEu_dp$$dGtdydABfcEGgtpe9-biK",
       "component" : "Deduplicate",
@@ -563,7 +658,7 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "Country_Id",
+              "name" : "Country_Id_SK",
               "type" : "long",
               "nullable" : false,
               "metadata" : {
@@ -614,7 +709,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Translates gender codes into descriptive labels for better understanding of customer demographics.",
+        "comment" : "Creates a descriptive gender classification for customers, enhancing data clarity for analysis and reporting.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -899,6 +994,13 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
+          "target" : "gender_id_SK",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "monotonically_increasing_id() + 1"
+          },
+          "description" : ""
+        }, {
           "target" : "gender_cd",
           "expression" : {
             "format" : "sql",
@@ -1275,14 +1377,16 @@
       "id" : "qoGLt57oAnHW3aJuTo6IC$$c7en2oqCUTVceDFSOOd67",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_1",
-        "slug" : "Source_1",
+        "label" : "airport-codes-bronze",
+        "slug" : "airport_codes_bronze",
         "x" : -3340,
         "y" : -420,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Retrieves airport code data for further analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -1294,7 +1398,9 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "datasets/airport-codes-bronze"
+      }
     },
     "ngWWyLHAmrKDR3W57OwUS$$mlWw0YTYBDBLnjFyNRDvF" : {
       "id" : "ngWWyLHAmrKDR3W57OwUS$$mlWw0YTYBDBLnjFyNRDvF",
@@ -2271,7 +2377,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Transforms and categorizes visa types for better clarity and understanding in reporting.",
+        "comment" : "Reformats visa type data, providing clear descriptions and unique identifiers for each visa type.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -2556,6 +2662,13 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
+          "target" : "visa_id_SK",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "monotonically_increasing_id() + 1"
+          },
+          "description" : ""
+        }, {
           "target" : "visa_type_id",
           "expression" : {
             "format" : "sql",
@@ -2608,6 +2721,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "visa_id_SK",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "visa_type_id",
               "type" : "integer",
               "nullable" : true,
@@ -3038,6 +3160,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "gender_id_SK",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "gender_cd",
               "type" : "string",
               "nullable" : true,
@@ -3388,7 +3519,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Extracts unique country codes along with their names, assigning a unique identifier to each country.",
+        "comment" : "Generates unique identifiers for countries while selecting their codes and names.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -3430,10 +3561,10 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
-          "target" : "Country_Id",
+          "target" : "Country_Id_SK",
           "expression" : {
             "format" : "sql",
-            "expression" : "monotonically_increasing_id()"
+            "expression" : "monotonically_increasing_id() + 1"
           },
           "description" : ""
         }, {
@@ -3459,6 +3590,435 @@
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
+    },
+    "B3lUTyJjd3fCGm2HUIFCu$$VqDpD_f9T3JjEAWu5AkWu" : {
+      "id" : "B3lUTyJjd3fCGm2HUIFCu$$VqDpD_f9T3JjEAWu5AkWu",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "join_ports_with_airports",
+        "slug" : "join_ports_with_airports",
+        "x" : -2980,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Links port data with corresponding airport information, enhancing the understanding of transportation connections.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8Q1C6dilynmJ68jOV8a2M$$cYT1RgF42JIKubTQSymzk",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "uid",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "cicid",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "year",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "month",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94res",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "port_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrival_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entry_mode_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "address_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "State of residence in the U.S. where the individual is staying; Represents the location of the individual's address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94bir",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dtad_file_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_post_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The location where the visa was issued; Typically represented as a state or country code.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "occupation",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Occupation of the individual; Indicates the job or profession of the immigrant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrival_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Departure status of the individual; Indicates whether the individual has departed or is still present.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_flag",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of departure from the U.S.; Indicates when the individual left the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "uodate_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of entry into the U.S.; Indicates when the individual arrived in the country.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "match_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the individual is a matched flag for immigration records.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "birth_year",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Gender of the individual; Values include 'M' for Male and 'F' for Female.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "INS_number",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "airline_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Airline code representing the carrier used for travel.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "admission_number",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "flight_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flight number associated with the immigration entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visatype",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "IATA",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The three-letter code assigned to each airport, used for ticketing and travel itineraries.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ICAO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The International Civil Aviation Organization code for the airport; A unique four-letter alphanumeric code assigned to each airport.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Airport_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The country where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the airport is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Information",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "URL link providing additional information about the airport, including details and statistics.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "6SGfFp-VG6kNTnz3W7c8c$$ZdqpPsjC1_TSDZO4zif4s",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.port_cd = in1.IATA"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "port_id_SK",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "monotonically_increasing_id() + 1"
+          },
+          "description" : "",
+          "_row_id" : "c_382"
+        }, {
+          "target" : "port_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.port_cd"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Airport_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.Airport_Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.City"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.Country"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "8Q1C6dilynmJ68jOV8a2M$$cYT1RgF42JIKubTQSymzk",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "8Q1C6dilynmJ68jOV8a2M$$cYT1RgF42JIKubTQSymzk##port_cd", "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY##IATA", "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY##Airport_Name", "8Q1C6dilynmJ68jOV8a2M$$cYT1RgF42JIKubTQSymzk##port_cd", "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY##City", "2ZIYqH5eD-b3NND8C4zP9$$TxIklaMV7-_lKfV4VRvpY##Country" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
     }
   },
   "ports" : {
@@ -3467,22 +4027,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.qoGLt57oAnHW3aJuTo6IC$$c7en2oqCUTVceDFSOOd67.properties.datasetId",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "dataset id missing",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

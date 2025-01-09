@@ -8,6 +8,7 @@ from dataprocessingsilver.functions import *
 
 def gender_description(spark: SparkSession, drop_duplicates_by_gender: DataFrame) -> DataFrame:
     return drop_duplicates_by_gender.select(
+        (monotonically_increasing_id() + lit(1)).alias("gender_id_SK"), 
         col("gender_cd"), 
         when((col("gender_cd") == lit("F")), lit("Female"))\
           .when((col("gender_cd") == lit("M")), lit("Male"))\

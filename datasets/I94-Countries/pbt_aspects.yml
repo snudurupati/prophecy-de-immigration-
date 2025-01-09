@@ -2,7 +2,7 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: Country_Id
+  - name: Country_Id_SK
     type: long
     nullable: false
     metadata:
