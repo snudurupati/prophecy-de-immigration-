@@ -2,24 +2,32 @@ version: 1
 schema:
   type: struct
   fields:
+  - name: Port_id1
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: Port_cd
     type: string
     nullable: true
     metadata:
-      description: Code representing the port of entry for the immigration event.
+      description: Unique code representing each port of entry.
       mappings: []
       tags: []
   - name: City
     type: string
     nullable: true
     metadata:
-      description: The city where the airport is located.
+      description: Name of the city associated with the port of entry; Some entries
+        may not have a specified city.
       mappings: []
       tags: []
   - name: Country
     type: string
     nullable: true
     metadata:
-      description: The country where the airport is located.
+      description: The name of the country associated with the port of entry.
       mappings: []
       tags: []

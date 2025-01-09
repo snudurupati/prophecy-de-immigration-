@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from dataprocessingsilver.config.ConfigStore import *
 from dataprocessingsilver.functions import *
 
-def immigration_fact(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("overwrite").saveAsTable("`sreeram`.`immigration_schema`.`immigration_fact`")
+def remove_duplicate_ports(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.dropDuplicates(["port_cd"])

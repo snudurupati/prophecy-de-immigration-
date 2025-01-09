@@ -2,6 +2,13 @@ version: 1
 schema:
   type: struct
   fields:
+  - name: Country_Id
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: Country_code
     type: string
     nullable: true

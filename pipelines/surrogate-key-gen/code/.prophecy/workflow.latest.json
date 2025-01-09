@@ -1,0 +1,309 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.6.0",
+        "pyPiVersion" : "1.9.28"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/surrogate-key-gen",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "surrogate-key-gen",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true
+    },
+    "language" : "python",
+    "fabricId" : "20471",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sreeramprophecyioteam.immigrationdw.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "surrogatekeygen",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "aetG51R2k13ZHd7WPG3gI",
+    "source" : "_0AVN_xtcKVwpqmVWu09p$$z06vN36AXsecFzMNKX-tr",
+    "sourcePort" : "eJimtA69h59_e4ztbzgFA$$SdSvdP6qFMqbjqTR-CLx8",
+    "target" : "AM6l312h7nwKNjBwxuR8Z$$mJpygc1tbeJtRINYCZaYd",
+    "targetPort" : "KyAuVlqTMGsc5kt1Qyr2K$$ZSN0fHOk12x9DjldGOC17"
+  }, {
+    "id" : "h1lRWtxN9X2HkJZG1_f95",
+    "source" : "AM6l312h7nwKNjBwxuR8Z$$mJpygc1tbeJtRINYCZaYd",
+    "sourcePort" : "k5IVv38F3hgFH3mn7KoJu$$VLezpsTmRB23uJt3SiKXb",
+    "target" : "KtReRF4CJIsbN66Qs_s75$$1WTjTKU2ININZAv-MLBql",
+    "targetPort" : "VnqmtJ-5zBDK8C_mTbQBV$$KQl76eT2T9bW_FJF4vIYe"
+  } ],
+  "processes" : {
+    "_0AVN_xtcKVwpqmVWu09p$$z06vN36AXsecFzMNKX-tr" : {
+      "id" : "_0AVN_xtcKVwpqmVWu09p$$z06vN36AXsecFzMNKX-tr",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Port-of-Entry",
+        "slug" : "Port_of_Entry",
+        "x" : -680,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves data on ports of entry for immigration records.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "eJimtA69h59_e4ztbzgFA$$SdSvdP6qFMqbjqTR-CLx8",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Port-of-Entry"
+      }
+    },
+    "AM6l312h7nwKNjBwxuR8Z$$mJpygc1tbeJtRINYCZaYd" : {
+      "id" : "AM6l312h7nwKNjBwxuR8Z$$mJpygc1tbeJtRINYCZaYd",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "add_port_id",
+        "slug" : "add_port_id",
+        "x" : -420,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Assigns unique identifiers to each port entry for better tracking and management.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KyAuVlqTMGsc5kt1Qyr2K$$ZSN0fHOk12x9DjldGOC17",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Port_id1",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Port_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique code representing each port of entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the city associated with the port of entry; Some entries may not have a specified city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the country associated with the port of entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "k5IVv38F3hgFH3mn7KoJu$$VLezpsTmRB23uJt3SiKXb",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "Port_id1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "monotonically_increasing_id()"
+          },
+          "description" : ""
+        }, {
+          "target" : "Port_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Port_cd"
+          },
+          "description" : ""
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "City"
+          },
+          "description" : ""
+        }, {
+          "target" : "Country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Country"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "KyAuVlqTMGsc5kt1Qyr2K$$ZSN0fHOk12x9DjldGOC17##City", "KyAuVlqTMGsc5kt1Qyr2K$$ZSN0fHOk12x9DjldGOC17##Port_cd", "KyAuVlqTMGsc5kt1Qyr2K$$ZSN0fHOk12x9DjldGOC17##Country" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "KtReRF4CJIsbN66Qs_s75$$1WTjTKU2ININZAv-MLBql" : {
+      "id" : "KtReRF4CJIsbN66Qs_s75$$1WTjTKU2ININZAv-MLBql",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Port-of-Entry_1",
+        "slug" : "Port_of_Entry_1",
+        "x" : -220,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Stores immigration data efficiently in a structured format for easy access and analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VnqmtJ-5zBDK8C_mTbQBV$$KQl76eT2T9bW_FJF4vIYe",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Port_id1",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Port_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique code representing each port of entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the city associated with the port of entry; Some entries may not have a specified city.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the country associated with the port of entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Port-of-Entry"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

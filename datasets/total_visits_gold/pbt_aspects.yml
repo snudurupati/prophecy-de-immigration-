@@ -20,7 +20,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: The name of the U.S. state.
+      description: Full name of the U.S. state.
       mappings: []
       tags: []
   - name: visa_subtype_cd

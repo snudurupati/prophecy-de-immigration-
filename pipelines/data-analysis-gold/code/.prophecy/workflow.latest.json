@@ -202,7 +202,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Combines multiple datasets to create a comprehensive view of travel-related data, enhancing insights into customer demographics and travel patterns.",
+        "comment" : "Integrates multiple data sources to provide a comprehensive view of travel-related information, enhancing insights into customer demographics and travel patterns.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -445,11 +445,20 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "Country_Id",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "Country_code",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Two-letter abbreviation representing the state within the United States.",
+                "description" : "The two-letter postal abbreviation representing each U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -458,7 +467,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The name of the U.S. state.",
+                "description" : "Full name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -799,7 +808,7 @@
             "format" : "sql",
             "expression" : "in0.dtad_file_id = in6.DateId"
           },
-          "joinType" : "inner"
+          "joinType" : "left_outer"
         } ],
         "expressions" : [ {
           "target" : "arrival_date_id",
@@ -968,7 +977,7 @@
         } ],
         "allIn1" : null,
         "activeTab" : "conditions",
-        "columnsSelector" : [ "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_id", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##dtad_file_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##visa_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##gender_cd", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_cd", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##entry_mode_id", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateId", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##port_cd", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_code", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##address_cd", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##IATA", "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_desc", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateLongDescription", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_desc", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##Airport_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarQuarter", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarDay", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##departure_date_id", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_desc", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##count", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarYear", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarMonth", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_subtype_cd", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##Date", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##City", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##arrival_date_id" ],
+        "columnsSelector" : [ "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##dtad_file_id", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##visa_id", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_cd", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##port_cd", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_code", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##entry_mode_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##address_cd", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##gender_cd", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##IATA", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateId", "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##departure_date_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##count", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_subtype_cd", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_desc", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarMonth", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarQuarter", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_Name", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_desc", "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_desc", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##City", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##Airport_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateLongDescription", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##Date", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarDay", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarYear", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##arrival_date_id" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
@@ -1109,7 +1118,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The name of the U.S. state.",
+                "description" : "Full name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1296,7 +1305,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The name of the U.S. state.",
+                "description" : "Full name of the U.S. state.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
