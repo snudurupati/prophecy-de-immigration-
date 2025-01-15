@@ -101,23 +101,11 @@
     "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
     "targetPort" : "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG"
   }, {
-    "id" : "SmP-BNUcsNNBKPwX45E9P",
-    "source" : "4d0e227mtbXG44_Fzbgxs$$ZSqeUIYLgixQocHhluDEM",
-    "sourcePort" : "OPBaqeCIMZw6KjGiN2Nfh$$iIeYER3OS-Kj3SObSGa10",
-    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
-    "targetPort" : "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI"
-  }, {
     "id" : "jkuLn54h4ZQB7v6p7tiQj",
     "source" : "wYLSox-YCMmbjuuw9X-7d$$_c9EnPTI-w2GGkJEl_uKL",
     "sourcePort" : "IjXY6gdzfco1DGIOZCcst$$zjV6PcAy_Z6Fq9gkweSYv",
     "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
     "targetPort" : "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3"
-  }, {
-    "id" : "iYg6GvIv7PshD4_YN1gYR",
-    "source" : "IjSZHa0llqghob-x3Mfa4$$N9e6r_b0QxyvJ1yAVT5f3",
-    "sourcePort" : "T6gyz9FKjTo3NQ4f24D2Q$$7S1BzkCV2QV-dv9D1BNn_",
-    "target" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
-    "targetPort" : "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG"
   }, {
     "id" : "NsL3SeO1GdmglmYdLeEKg$$PTMeybNGiSuRgo-dMOIuv",
     "source" : "3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf",
@@ -167,8 +155,8 @@
       "metadata" : {
         "label" : "calendar",
         "slug" : "calendar",
-        "x" : -460,
-        "y" : 220,
+        "x" : -600,
+        "y" : 80,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -202,7 +190,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Integrates multiple data sources to provide a comprehensive view of travel-related information, enhancing insights into customer demographics and travel patterns.",
+        "comment" : "Combines various datasets to provide a comprehensive view of visitor statistics, including demographics and visa information.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -528,68 +516,6 @@
           },
           "isStreaming" : false
         }, {
-          "id" : "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG",
-          "slug" : "in3",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "IATA",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The three-letter code assigned to each airport, used for ticketing and travel itineraries.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ICAO",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The International Civil Aviation Organization code for the airport; A unique four-letter alphanumeric code assigned to each airport.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Airport_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The official name of the airport, which serves as a key identifier for the location.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Country",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The country where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "City",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The city where the airport is located.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Information",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "URL link providing additional information about the airport, including details and statistics.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        }, {
           "id" : "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG",
           "slug" : "in4",
           "schema" : {
@@ -614,32 +540,6 @@
               }
             }, {
               "name" : "gender_desc",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        }, {
-          "id" : "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI",
-          "slug" : "in5",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "entry_mode_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "entry_mode_desc",
               "type" : "string",
               "nullable" : false,
               "metadata" : {
@@ -798,71 +698,41 @@
           "alias" : "in1",
           "expression" : {
             "format" : "sql",
-            "expression" : "in0.address_cd = in1.Country_code"
+            "expression" : "in0.Country_Id_SK= in1.Country_Id_SK"
           },
           "joinType" : "left_outer"
         }, {
           "alias" : "in2",
           "expression" : {
             "format" : "sql",
-            "expression" : "in0.visa_id = in2.visa_type_id"
-          },
-          "joinType" : "left_outer"
-        }, {
-          "alias" : "in3",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "in0.port_cd = in3.IATA"
+            "expression" : "in0.visa_id_SK = in2.visa_id_SK"
           },
           "joinType" : "left_outer"
         }, {
           "alias" : "in4",
           "expression" : {
             "format" : "sql",
-            "expression" : "in0.gender_cd = in4.gender_cd"
-          },
-          "joinType" : "left_outer"
-        }, {
-          "alias" : "in5",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "in0.entry_mode_id = in5.entry_mode_id"
+            "expression" : "in0.gender_cd_sk = in4.gender_id_SK"
           },
           "joinType" : "left_outer"
         }, {
           "alias" : "in6",
           "expression" : {
             "format" : "sql",
-            "expression" : "in0.dtad_file_id = in6.DateId"
+            "expression" : "in0.filed_date_id = in6.DateId"
           },
           "joinType" : "left_outer"
         } ],
         "expressions" : [ {
-          "target" : "arrival_date_id",
+          "target" : "Visit_Count",
           "expression" : {
             "format" : "sql",
-            "expression" : "to_date(in0.arrival_date_id, 'yyyyMMdd')"
+            "expression" : "in0.visit_count"
           },
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "departure_date_id",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "to_date(in0.departure_date_id, 'yyyyMMdd')"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "count",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "in0.count"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "Country_Name",
+          "target" : "Country",
           "expression" : {
             "format" : "sql",
             "expression" : "in1.Country_Name"
@@ -870,7 +740,7 @@
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "visa_subtype_cd",
+          "target" : "Visa_Subtype",
           "expression" : {
             "format" : "sql",
             "expression" : "in2.visa_subtype_cd"
@@ -878,7 +748,7 @@
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "visa_type_desc",
+          "target" : "Visa_Type",
           "expression" : {
             "format" : "sql",
             "expression" : "in2.visa_type_desc"
@@ -886,18 +756,10 @@
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "gender_desc",
+          "target" : "Gender",
           "expression" : {
             "format" : "sql",
             "expression" : "in4.gender_desc"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "entry_mode_desc",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "in5.entry_mode_desc"
           },
           "description" : "",
           "_row_id" : null
@@ -949,22 +811,6 @@
           },
           "description" : "",
           "_row_id" : null
-        }, {
-          "target" : "Airport_Name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "in3.Airport_Name"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "City",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "in3.City"
-          },
-          "description" : "",
-          "_row_id" : null
         } ],
         "hints" : [ {
           "id" : "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f",
@@ -982,18 +828,8 @@
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG",
-          "alias" : "in3",
-          "hintType" : "none",
-          "propagateColumns" : false
-        }, {
           "id" : "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG",
           "alias" : "in4",
-          "hintType" : "none",
-          "propagateColumns" : false
-        }, {
-          "id" : "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI",
-          "alias" : "in5",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
@@ -1003,8 +839,8 @@
           "propagateColumns" : false
         } ],
         "allIn1" : null,
-        "activeTab" : "conditions",
-        "columnsSelector" : [ "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##dtad_file_id", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##visa_id", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_cd", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##port_cd", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_code", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##entry_mode_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##address_cd", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##gender_cd", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##IATA", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateId", "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##departure_date_id", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##count", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_subtype_cd", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_desc", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarMonth", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarQuarter", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_Name", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_desc", "hJuURSxbDY3yfhTFcUaeD$$gkEQAnKCQz-_cJZWkX6rI##entry_mode_desc", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##City", "SlXbosnUyIXanG7aw3LO1$$N52pGt4QBNJ6H59sbmbYG##Airport_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateLongDescription", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##Date", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarDay", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarYear", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##arrival_date_id" ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##gender_cd_sk", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##filed_date_id", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_Id_SK", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##Country_Id_SK", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##visa_id_SK", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_id_SK", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_id_SK", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateId", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarYear", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarMonth", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##DateLongDescription", "HYhuzrHFbEH6P6sqfv-8Q$$dY2BnpoHif6-P2y3XzoRG##gender_desc", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##Date", "74jClIOyAVUcyfT2i9VuU$$JHiE0Dk6zP-2EO4w0bk0f##visit_count", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_type_desc", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarDay", "2U6Z-nE1WZZBTpRiidEGo$$SilX3BUbBRmi5qaDW2tkp##Country_Name", "JAdbuDkqfcc61Qh4mfbVQ$$jf5-4GHuoJDpx5fxOkWe3##CalendarQuarter", "onYXzHWbTbtsJ73cONV1c$$GKgySaRC0zcjGySk5gY_H##visa_subtype_cd" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
@@ -1049,8 +885,8 @@
       "metadata" : {
         "label" : "gender",
         "slug" : "gender",
-        "x" : -780,
-        "y" : 80,
+        "x" : -720,
+        "y" : -80,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -1072,35 +908,6 @@
         "datasetId" : "datasets/gender"
       }
     },
-    "IjSZHa0llqghob-x3Mfa4$$N9e6r_b0QxyvJ1yAVT5f3" : {
-      "id" : "IjSZHa0llqghob-x3Mfa4$$N9e6r_b0QxyvJ1yAVT5f3",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "airport-codes-bronze",
-        "slug" : "airport_codes_bronze",
-        "x" : -840,
-        "y" : -60,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Retrieves a dataset containing U.S. state codes for immigration records.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "T6gyz9FKjTo3NQ4f24D2Q$$7S1BzkCV2QV-dv9D1BNn_",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/airport-codes-bronze"
-      }
-    },
     "DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS" : {
       "id" : "DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS",
       "component" : "Target",
@@ -1119,7 +926,120 @@
       "ports" : {
         "inputs" : [ {
           "id" : "TQkD8oOFKt90y-LhXsOqn$$C_Q701kRbEnTrPFjvqo9D",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Visit_Count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Visa_Subtype",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Visa_Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date, represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Total_Visits",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -1142,13 +1062,117 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Aggregates total visits by various dimensions, including date and location, to provide insights into travel patterns.",
+        "comment" : "Aggregates visit counts by various demographic and temporal factors, providing insights into visitor trends by date and location.",
         "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
           "id" : "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK",
-          "slug" : "multi_join"
+          "slug" : "multi_join",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Visit_Count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full name of the U.S. state.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Visa_Subtype",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Visa_Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The specific date represented in the dataset, formatted as YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DateLongDescription",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Full descriptive representation of the date, including the day of the week, month, day, and year.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarMonth",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The month number of the year when the date falls, ranging from 1 for January to 12 for December.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarDay",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The day of the month represented as an integer, indicating the specific day within the calendar.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The quarter of the year in which the date falls, ranging from 1 to 4.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CalendarYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The year of the date, represented as a four-digit integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "Sitc6Vg6OY2W_2-vr2yrc$$-Xmuilj8VAs8msZnysHd3",
@@ -1162,10 +1186,10 @@
         "allIns" : false,
         "doPivot" : false,
         "aggregate" : [ {
-          "target" : "total_visits",
+          "target" : "Total_Visits",
           "expression" : {
             "format" : "sql",
-            "expression" : "sum(count)"
+            "expression" : "sum(Visit_Count)"
           },
           "description" : "",
           "_row_id" : null
@@ -1173,61 +1197,45 @@
         "allowSelection" : true,
         "pivotColumn" : null,
         "pivotValues" : [ ],
-        "activeTab" : "groupBy",
-        "columnsSelector" : [ "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##visa_type_desc", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##arrival_date_id", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##DateLongDescription", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarQuarter", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Country_Name", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarMonth", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarYear", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Date", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##entry_mode_desc", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##visa_subtype_cd", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##departure_date_id", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarDay", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##count", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##City", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Airport_Name", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##gender_desc" ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Date", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarYear", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Visa_Subtype", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarDay", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarQuarter", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##DateLongDescription", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Visa_Type", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Gender", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Country", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##Visit_Count", "F04QXVdMkdrS-OghKO77u$$AODRx1TrGPJDv44qa-EcK##CalendarMonth" ],
         "groupBy" : [ {
-          "target" : "arrival_date_id",
+          "target" : "Visit_Count",
           "expression" : {
             "format" : "sql",
-            "expression" : "arrival_date_id"
+            "expression" : "Visit_Count"
           },
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "departure_date_id",
+          "target" : "Country",
           "expression" : {
             "format" : "sql",
-            "expression" : "departure_date_id"
+            "expression" : "Country"
           },
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "Country_Name",
+          "target" : "Visa_Subtype",
           "expression" : {
             "format" : "sql",
-            "expression" : "Country_Name"
+            "expression" : "Visa_Subtype"
           },
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "visa_subtype_cd",
+          "target" : "Visa_Type",
           "expression" : {
             "format" : "sql",
-            "expression" : "visa_subtype_cd"
+            "expression" : "Visa_Type"
           },
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "visa_type_desc",
+          "target" : "Gender",
           "expression" : {
             "format" : "sql",
-            "expression" : "visa_type_desc"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "gender_desc",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "gender_desc"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "entry_mode_desc",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "entry_mode_desc"
+            "expression" : "Gender"
           },
           "description" : "",
           "_row_id" : null
@@ -1279,22 +1287,6 @@
           },
           "description" : "",
           "_row_id" : null
-        }, {
-          "target" : "Airport_Name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "Airport_Name"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "City",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "City"
-          },
-          "description" : "",
-          "_row_id" : null
         } ]
       },
       "componentInfo" : {
@@ -1330,35 +1322,6 @@
       "properties" : {
         "datasetId" : "datasets/immigration-fact"
       }
-    },
-    "4d0e227mtbXG44_Fzbgxs$$ZSqeUIYLgixQocHhluDEM" : {
-      "id" : "4d0e227mtbXG44_Fzbgxs$$ZSqeUIYLgixQocHhluDEM",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "entry-mode",
-        "slug" : "entry_mode",
-        "x" : -720,
-        "y" : 220,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Retrieves data on modes of entry for immigration, providing insights into entry patterns.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "OPBaqeCIMZw6KjGiN2Nfh$$iIeYER3OS-Kj3SObSGa10",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/entry-mode"
-      }
     }
   },
   "ports" : {
@@ -1367,138 +1330,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[0].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "No match found for column in0.address_cd [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[1].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "No match found for column in0.visa_id [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[2].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "No match found for column in0.port_cd [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[3].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "No match found for column in0.gender_cd [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.conditions[5].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "No match found for column in0.dtad_file_id [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.3PERnSyo4bHuoI2hX9Q6G$$YLztGXGzjwluWUnES5Ymf.properties.expressions[2].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "No match found for column in0.count [Expressions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticFix" : {
-      "fixType" : "CopilotDiagnosticFix",
-      "copilotFixType" : "expression"
-    }
-  }, {
-    "property" : "$.workflow.processes.itAZN_-m0DGvJpdhZtiNu$$1aYLVDUuQwLAw7w6vN8D-",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.DzC55sC-PRqrfUi68kuZp$$wY0rpL09ApG7V_n-OGnyS",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

@@ -9,7 +9,10 @@ from surrogatekeygen.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_Port_of_Entry = Port_of_Entry(spark)
     df_add_port_id = add_port_id(spark, df_Port_of_Entry)
+    df_entry_mode = entry_mode(spark)
     Port_of_Entry_1(spark, df_add_port_id)
+    df_reformat_timestamp = reformat_timestamp(spark, df_entry_mode)
+    bronze_sample(spark, df_reformat_timestamp)
 
 def main():
     spark = SparkSession.builder\

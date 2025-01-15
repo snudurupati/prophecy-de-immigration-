@@ -36,5 +36,7 @@ def reformatted_data_types(spark: SparkSession, in0: DataFrame) -> DataFrame:
         col("airline").alias("airline_cd"), 
         col("admnum").cast(IntegerType()).alias("admission_number"), 
         col("fltno").alias("flight_number"), 
-        col("visatype")
+        col("visatype"), 
+        current_timestamp().alias("insert_ts"), 
+        current_timestamp().alias("update_ts")
     )

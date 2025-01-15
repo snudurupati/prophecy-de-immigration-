@@ -30,7 +30,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "sreeramprophecyioteam.immigrationdw.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -59,6 +59,10 @@
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
       "externalDependencies" : [ ]
     }, {
       "projectUID" : "12655",
@@ -913,6 +917,24 @@
               "nullable" : true,
               "metadata" : {
                 "description" : "Type of visa issued to the individual; Indicates the category of visa under which the individual is allowed entry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "insert_ts",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "update_ts",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -2041,7 +2063,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Standardizes data types for immigration-related records to ensure consistency and accuracy in analysis.",
+        "comment" : "Standardizes and reformats data types for immigration records, ensuring consistent and accurate data for analysis.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -2528,10 +2550,24 @@
             "expression" : "visatype"
           },
           "description" : ""
+        }, {
+          "target" : "insert_ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "current_timestamp()"
+          },
+          "description" : ""
+        }, {
+          "target" : "update_ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "current_timestamp()"
+          },
+          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##gender", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##biryear", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtaddto", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##admnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtadfile", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##depdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visapost", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepu", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94bir", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##cicid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##insnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##count", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mon", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94cit", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepd", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visatype", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94addr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##arrdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##fltno", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94res", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##airline", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##uid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##occup", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##matflag", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94visa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mode", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94yr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94port" ]
+        "columnsSelector" : [ "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtaddto", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##dtadfile", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mode", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94bir", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##occup", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepu", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##matflag", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##depdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##insnum", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94addr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94yr", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94visa", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##gender", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visapost", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##visatype", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##uid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##airline", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94cit", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##cicid", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##arrdate", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94mon", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94res", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##i94port", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##count", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##biryear", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##entdepd", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##fltno", "FfzM4nrrJyrLG4OUWaCZF$$N4xaPEZ17_Qk1-16Oo1ZR##admnum" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",

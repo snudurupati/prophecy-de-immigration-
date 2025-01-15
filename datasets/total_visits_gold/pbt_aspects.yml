@@ -2,28 +2,21 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: arrival_date_id
-    type: date
+  - name: Visit_Count
+    type: integer
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: departure_date_id
-    type: date
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: Country_Name
+  - name: Country
     type: string
     nullable: true
     metadata:
       description: Full name of the U.S. state.
       mappings: []
       tags: []
-  - name: visa_subtype_cd
+  - name: Visa_Subtype
     type: string
     nullable: true
     metadata:
@@ -31,21 +24,14 @@ schema:
         visa under which the individual is allowed entry.
       mappings: []
       tags: []
-  - name: visa_type_desc
+  - name: Visa_Type
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: gender_desc
-    type: string
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: entry_mode_desc
+  - name: Gender
     type: string
     nullable: true
     metadata:
@@ -98,22 +84,7 @@ schema:
       description: The year of the date, represented as a four-digit integer.
       mappings: []
       tags: []
-  - name: Airport_Name
-    type: string
-    nullable: true
-    metadata:
-      description: The official name of the airport, which serves as a key identifier
-        for the location.
-      mappings: []
-      tags: []
-  - name: City
-    type: string
-    nullable: true
-    metadata:
-      description: The city where the airport is located.
-      mappings: []
-      tags: []
-  - name: total_visits
+  - name: Total_Visits
     type: long
     nullable: true
     metadata:

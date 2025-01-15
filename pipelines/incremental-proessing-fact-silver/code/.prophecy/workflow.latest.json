@@ -1,0 +1,967 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.6.0",
+        "pyPiVersion" : "1.9.28"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/incremental-proessing-fact-silver",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "incremental-proessing-fact-silver",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true
+    },
+    "language" : "python",
+    "fabricId" : "20471",
+    "frontEndLanguage" : "sql",
+    "mode" : "stream",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sreeramprophecyioteam.immigrationdw.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "incrementalproessingfactsilver",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "67e1B1G1ajtv1zFSmwdwb$$Kwe4lUgCqe0XgmNLJEJxA",
+    "source" : "j2OdVFXeRW28XjjNK4iKP$$xLo2RkS8cPHTkDLXT-pvQ",
+    "sourcePort" : "fRdGa6wDa28KnoXWw3uSf$$wM7Wwm9EufcgosgslXBLL",
+    "target" : "6oeZVK2RE8wM3aNZ3hkSF$$zC0jkEgliQDe906Kqig7e",
+    "targetPort" : "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc"
+  }, {
+    "id" : "y4xeB_eR0Bd5F2nxJRYso$$wox68Hv_hCFH7Z0LJ3ATk",
+    "source" : "6oeZVK2RE8wM3aNZ3hkSF$$zC0jkEgliQDe906Kqig7e",
+    "sourcePort" : "20piOE_AX-D5r8ftoBhu4$$FKhsbqIMh4RvyY8GXZFoo",
+    "target" : "JMQIA1r2Mfni2tlJ_No6D$$Mzj1IyynK_tKIjO3UvmHE",
+    "targetPort" : "HSXOfdoxvpYKJYIQUpqSu$$2a-roxHoDE7LXW3SAzv1P"
+  } ],
+  "processes" : {
+    "j2OdVFXeRW28XjjNK4iKP$$xLo2RkS8cPHTkDLXT-pvQ" : {
+      "id" : "j2OdVFXeRW28XjjNK4iKP$$xLo2RkS8cPHTkDLXT-pvQ",
+      "component" : "StreamingSource",
+      "metadata" : {
+        "label" : "immigration-bronze-incremental",
+        "slug" : "immigration_bronze_incremental",
+        "x" : -2080,
+        "y" : -640,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "fRdGa6wDa28KnoXWw3uSf$$wM7Wwm9EufcgosgslXBLL",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/immigration-bronze-incremental"
+      }
+    },
+    "6oeZVK2RE8wM3aNZ3hkSF$$zC0jkEgliQDe906Kqig7e" : {
+      "id" : "6oeZVK2RE8wM3aNZ3hkSF$$zC0jkEgliQDe906Kqig7e",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformatted_i94_data",
+        "slug" : "reformatted_i94_data",
+        "x" : -1900,
+        "y" : -640,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Transforms and organizes immigration data for better analysis and reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "_c0",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "An identifier for the record",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "cicid",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the individual in the immigration system",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94yr",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year of arrival in the country",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94mon",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Month of arrival in the country",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94cit",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country code of the individual's citizenship",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94res",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country code of the individual's residence",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94port",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Port of entry for the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrdate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of arrival into the country",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94mode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Mode of transportation used for entry",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94addr",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Address where the individual will stay in the U.S.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "depdate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of departure from the country",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94bir",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Birth year of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94visa",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Visa type of the individual entering the country",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "count",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Count of entries for the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dtadfile",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the admission file was created",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visapost",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The visa post where the visa was issued",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "occup",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Occupation of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entdepa",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Departure status of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entdepd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of departure from the U.S.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entdepu",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of entry into the U.S.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "matflag",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates if the individual is a material witness",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "biryear",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year of birth of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dtaddto",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date until the visitor's admission is valid",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Gender of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "insnum",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Insurance number associated with the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "airline",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Airline carrier used for travel",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "admnum",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Admission number assigned to the individual upon entry",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "fltno",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flight number associated with the individual's arrival",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visatype",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of visa held by the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : true
+        } ],
+        "outputs" : [ {
+          "id" : "20piOE_AX-D5r8ftoBhu4$$FKhsbqIMh4RvyY8GXZFoo",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "uid",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(_c0 as int)"
+          },
+          "description" : ""
+        }, {
+          "target" : "cicid",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(cicid as int)"
+          },
+          "description" : ""
+        }, {
+          "target" : "year",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94yr as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94mon as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "city_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94cit as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "i94res",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94res as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "port_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "i94port"
+          },
+          "description" : ""
+        }, {
+          "target" : "arrival_date_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(arrdate as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "entry_mode_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94mode as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "address_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "i94addr"
+          },
+          "description" : ""
+        }, {
+          "target" : "departure_date_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(depdate as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "i94bir",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94bir as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "visa_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(i94visa as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "count",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(count as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "dtad_file_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(dtadfile as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "visa_post_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "visapost"
+          },
+          "description" : ""
+        }, {
+          "target" : "occupation",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "occup"
+          },
+          "description" : ""
+        }, {
+          "target" : "arrival_flg",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "entdepa"
+          },
+          "description" : ""
+        }, {
+          "target" : "departure_flag",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "entdepd"
+          },
+          "description" : ""
+        }, {
+          "target" : "uodate_flg",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "entdepu"
+          },
+          "description" : ""
+        }, {
+          "target" : "match_flg",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "matflag"
+          },
+          "description" : ""
+        }, {
+          "target" : "birth_year",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(biryear as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "departure_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(dtaddto as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "gender_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "gender"
+          },
+          "description" : ""
+        }, {
+          "target" : "INS_number",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(insnum as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "airline_cd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "airline"
+          },
+          "description" : ""
+        }, {
+          "target" : "admission_number",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(admnum as integer)"
+          },
+          "description" : ""
+        }, {
+          "target" : "flight_number",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "fltno"
+          },
+          "description" : ""
+        }, {
+          "target" : "visatype",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "visatype"
+          },
+          "description" : ""
+        }, {
+          "target" : "insert_ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "current_timestamp()"
+          },
+          "description" : ""
+        }, {
+          "target" : "update_ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "current_timestamp()"
+          },
+          "description" : ""
+        } ],
+        "importString" : "uid,cast(uid as int)\ncicid,cast(cicid as int)\nyear,cast(i94yr as integer)\nmonth,cast(i94mon as integer)\ncity_id,cast(i94cit as integer)\ni94res,cast(i94res as integer)\nport_cd,i94port\narrival_date_id,cast(arrdate as integer)\nentry_mode_id,cast(i94mode as integer)\naddress_cd,i94addr\ndeparture_date_id,cast(depdate as integer)\ni94bir,cast(i94bir as integer)\nvisa_id,cast(i94visa as integer)\ncount,cast(count as integer)\ndtad_file_id,cast(dtadfile as integer)\nvisa_post_cd,visapost\noccupation,occup\narrival_flg,entdepa\ndeparture_flag,entdepd\nuodate_flg,entdepu\nmatch_flg,matflag\nbirth_year,cast(biryear as integer)\ndeparture_date,cast(dtaddto as integer)\ngender_cd,gender\nINS_number,cast(insnum as integer)\nairline_cd,airline\nadmission_number,cast(admnum as integer)\nflight_number,fltno\nvisatype,visatype\ninsert_ts,current_timestamp()\nupdate_ts,current_timestamp()",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##admnum", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##visapost", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##depdate", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94visa", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94mon", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94cit", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##visatype", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94port", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94res", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##dtaddto", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94addr", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##_c0", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94yr", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepd", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##matflag", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##dtadfile", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94mode", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##count", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##cicid", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepu", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94bir", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##gender", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepa", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##insnum", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##arrdate", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##occup", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##airline", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##biryear", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##fltno" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "JMQIA1r2Mfni2tlJ_No6D$$Mzj1IyynK_tKIjO3UvmHE" : {
+      "id" : "JMQIA1r2Mfni2tlJ_No6D$$Mzj1IyynK_tKIjO3UvmHE",
+      "component" : "StreamingTarget",
+      "metadata" : {
+        "label" : "bronze-immigration-incremental",
+        "slug" : "bronze_immigration_incremental",
+        "x" : -1700,
+        "y" : -640,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Streams immigration data into a bronze layer for incremental updates, ensuring timely access to the latest information.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HSXOfdoxvpYKJYIQUpqSu$$2a-roxHoDE7LXW3SAzv1P",
+          "slug" : "reformatted_i94_data",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "uid",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "cicid",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "year",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "month",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94res",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "port_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Port of entry for the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrival_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "entry_mode_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "address_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Address where the individual will stay in the U.S.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "i94bir",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "count",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dtad_file_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visa_post_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The visa post where the visa was issued",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "occupation",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Occupation of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "arrival_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Departure status of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_flag",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of departure from the U.S.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "uodate_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of entry into the U.S.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "match_flg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates if the individual is a material witness",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "birth_year",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "departure_date",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "gender_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Gender of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "INS_number",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "airline_cd",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Airline carrier used for travel",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "admission_number",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "flight_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flight number associated with the individual's arrival",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "visatype",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of visa held by the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "insert_ts",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "update_ts",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : true
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-immigration-incremental"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

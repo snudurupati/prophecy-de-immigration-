@@ -30,7 +30,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "sreeramprophecyioteam.immigrationdw.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -59,6 +59,10 @@
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
       "externalDependencies" : [ ]
     }, {
       "projectUID" : "12655",
@@ -1189,6 +1193,24 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "insert_ts",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "update_ts",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -1202,7 +1224,7 @@
               "type" : "long",
               "nullable" : false,
               "metadata" : {
-                "description" : "Unique identifier for each airport in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1211,7 +1233,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Unique code assigned to each airport; Represents the airport's IATA code.",
+                "description" : "Port of entry into the United States; Represents the code for the location where the individual arrived.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1220,7 +1242,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The name of the airport, indicating the primary facility for air travel in the respective city.",
+                "description" : "The official name of the airport, which serves as a key identifier for the location.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1229,7 +1251,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The name of the city where the airport is located.",
+                "description" : "The city where the airport is located.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }

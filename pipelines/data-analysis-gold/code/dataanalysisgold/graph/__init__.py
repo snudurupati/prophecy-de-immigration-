@@ -1,7 +1,5 @@
 from .multi_join import multi_join
 from .visa_types import visa_types
-from .entry_mode import entry_mode
-from .airport_codes_bronze import airport_codes_bronze
 from .total_visits_gold import total_visits_gold
 from .calendar import calendar
 from .total_visits_by_date_and_location import total_visits_by_date_and_location

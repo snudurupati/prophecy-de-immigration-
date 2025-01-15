@@ -12,18 +12,7 @@ def pipeline(spark: SparkSession) -> None:
     df_immigration_fact = immigration_fact(spark)
     df_I94_Countries = I94_Countries(spark)
     df_gender = gender(spark)
-    df_entry_mode = entry_mode(spark)
-    df_airport_codes_bronze = airport_codes_bronze(spark)
-    df_multi_join = multi_join(
-        spark, 
-        df_immigration_fact, 
-        df_I94_Countries, 
-        df_visa_types, 
-        df_airport_codes_bronze, 
-        df_gender, 
-        df_entry_mode, 
-        df_calendar
-    )
+    df_multi_join = multi_join(spark, df_immigration_fact, df_I94_Countries, df_visa_types, df_gender, df_calendar)
     df_total_visits_by_date_and_location = total_visits_by_date_and_location(spark, df_multi_join)
     total_visits_gold(spark, df_total_visits_by_date_and_location)
 

@@ -69,9 +69,7 @@ pipelines:
     datasets:
       inputs:
       - datasets/I94-Countries
-      - datasets/airport-codes-bronze
       - datasets/calendar
-      - datasets/entry-mode
       - datasets/gender
       - datasets/immigration-fact
       - datasets/visa-types
@@ -90,8 +88,10 @@ pipelines:
     datasets:
       inputs:
       - datasets/Port-of-Entry
+      - datasets/entry-mode
       outputs:
       - datasets/Port-of-Entry
+      - datasets/bronze-sample
     subgraphs: []
     dependencies: {}
   pipelines/data-processing-fact-silver:
@@ -111,6 +111,21 @@ pipelines:
       - datasets/visa-types
       outputs:
       - datasets/immigration-fact
+    subgraphs: []
+    dependencies: {}
+  pipelines/incremental-proessing-fact-silver:
+    name: incremental-proessing-fact-silver
+    description: ''
+    author: sreeram@prophecy.io
+    mode: stream
+    artefactID: ''
+    language: python
+    createdAt: '2025-01-15 12:26:32'
+    datasets:
+      inputs:
+      - datasets/immigration-bronze-incremental
+      outputs:
+      - datasets/bronze-immigration-incremental
     subgraphs: []
     dependencies: {}
 datasets:
@@ -374,6 +389,58 @@ datasets:
         description: ''
         author: sreeram@prophecy.io
         createdAt: '2025-01-09 16:12:31'
+  datasets/file-incremental:
+    name: file-incremental
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-09 20:37:17'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-09 20:37:17'
+  datasets/bronze-sample:
+    name: bronze-sample
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-14 16:38:46'
+    mode: batch
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-14 16:38:46'
+  datasets/immigration-bronze-incremental:
+    name: immigration-bronze-incremental
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-15 12:54:32'
+    mode: stream
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: File
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-15 12:54:32'
+  datasets/bronze-immigration-incremental:
+    name: bronze-immigration-incremental
+    description: ''
+    author: sreeram@prophecy.io
+    createdAt: '2025-01-15 13:13:41'
+    mode: stream
+    physicalDatasets:
+      guides-prod-3:
+        fabricId: 20471
+        datasetType: Database
+        description: ''
+        author: sreeram@prophecy.io
+        createdAt: '2025-01-15 13:13:41'
 templates: {}
 jobs: {}
 gemContainer:
@@ -440,6 +507,14 @@ projectDependencies:
     isDefault: true
     author: null
     createdAt: '2024-12-23 22:10:53'
+  '12656':
+    projectUID: 12656
+    projectName: ProphecyStreamingPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=
+    version: 0.0.6
+    isDefault: true
+    author: null
+    createdAt: '2025-01-15 12:26:32'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
