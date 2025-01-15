@@ -128,6 +128,19 @@ pipelines:
       - datasets/bronze-immigration-incremental
     subgraphs: []
     dependencies: {}
+  pipelines/incremental-processing-fact-silver:
+    name: incremental-processing-fact-silver
+    description: ''
+    author: sreeram@prophecy.io
+    mode: stream
+    artefactID: ''
+    language: python
+    createdAt: '2025-01-15 14:59:53'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/immigration-raw:
     name: immigration-raw
@@ -416,7 +429,7 @@ datasets:
         author: sreeram@prophecy.io
         createdAt: '2025-01-14 16:38:46'
   datasets/immigration-bronze-incremental:
-    name: immigration-bronze-incremental
+    name: immigration-raw-incremental
     description: ''
     author: sreeram@prophecy.io
     createdAt: '2025-01-15 12:54:32'
@@ -429,7 +442,7 @@ datasets:
         author: sreeram@prophecy.io
         createdAt: '2025-01-15 12:54:32'
   datasets/bronze-immigration-incremental:
-    name: bronze-immigration-incremental
+    name: immigration-bronze-incremental
     description: ''
     author: sreeram@prophecy.io
     createdAt: '2025-01-15 13:13:41'
