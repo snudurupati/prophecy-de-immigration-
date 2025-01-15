@@ -114,7 +114,7 @@ pipelines:
     subgraphs: []
     dependencies: {}
   pipelines/incremental-proessing-fact-silver:
-    name: incremental-proessing-fact-silver
+    name: incremental-proessing-fact-bronze
     description: ''
     author: sreeram@prophecy.io
     mode: stream
