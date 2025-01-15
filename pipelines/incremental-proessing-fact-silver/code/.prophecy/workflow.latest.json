@@ -99,8 +99,8 @@
       "metadata" : {
         "label" : "immigration-bronze-incremental",
         "slug" : "immigration_bronze_incremental",
-        "x" : -2080,
-        "y" : -640,
+        "x" : -2620,
+        "y" : -920,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -126,8 +126,8 @@
       "metadata" : {
         "label" : "reformatted_i94_data",
         "slug" : "reformatted_i94_data",
-        "x" : -1900,
-        "y" : -640,
+        "x" : -2440,
+        "y" : -920,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -636,7 +636,7 @@
         } ],
         "importString" : "uid,cast(uid as int)\ncicid,cast(cicid as int)\nyear,cast(i94yr as integer)\nmonth,cast(i94mon as integer)\ncity_id,cast(i94cit as integer)\ni94res,cast(i94res as integer)\nport_cd,i94port\narrival_date_id,cast(arrdate as integer)\nentry_mode_id,cast(i94mode as integer)\naddress_cd,i94addr\ndeparture_date_id,cast(depdate as integer)\ni94bir,cast(i94bir as integer)\nvisa_id,cast(i94visa as integer)\ncount,cast(count as integer)\ndtad_file_id,cast(dtadfile as integer)\nvisa_post_cd,visapost\noccupation,occup\narrival_flg,entdepa\ndeparture_flag,entdepd\nuodate_flg,entdepu\nmatch_flg,matflag\nbirth_year,cast(biryear as integer)\ndeparture_date,cast(dtaddto as integer)\ngender_cd,gender\nINS_number,cast(insnum as integer)\nairline_cd,airline\nadmission_number,cast(admnum as integer)\nflight_number,fltno\nvisatype,visatype\ninsert_ts,current_timestamp()\nupdate_ts,current_timestamp()",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##admnum", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##visapost", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##depdate", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94visa", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94mon", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94cit", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##visatype", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94port", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94res", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##dtaddto", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94addr", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##_c0", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94yr", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepd", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##matflag", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##dtadfile", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94mode", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##count", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##cicid", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepu", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94bir", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##gender", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepa", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##insnum", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##arrdate", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##occup", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##airline", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##biryear", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##fltno" ]
+        "columnsSelector" : [ "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##gender", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94mon", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94yr", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94res", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94port", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##admnum", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##depdate", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##arrdate", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##count", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##occup", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepu", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##biryear", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##fltno", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##_c0", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepa", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##visatype", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##dtadfile", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##visapost", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##dtaddto", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##insnum", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94cit", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##entdepd", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94addr", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94mode", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##airline", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##matflag", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94bir", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##cicid", "Brm2MgjemIgS2WZIfCihE$$i-IbUYaKl8OUidMAZyomc##i94visa" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -649,8 +649,8 @@
       "metadata" : {
         "label" : "bronze-immigration-incremental",
         "slug" : "bronze_immigration_incremental",
-        "x" : -1700,
-        "y" : -640,
+        "x" : -2240,
+        "y" : -920,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
